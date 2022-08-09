@@ -44,7 +44,7 @@ export const BTN = styled(Button)`
 
 export const FoodsBox = styled.div`
   width: 100%;
-  height: 150vh;
+  height: 165vh;
   background-color: gainsboro;
   display: flex;
   align-items: center;
@@ -53,10 +53,8 @@ export const FoodsBox = styled.div`
 `;
 
 export const Box = styled.div`
-  width: 310px;
-  height: 368px;
-  left: 75px;
-  top: 3183px;
+  width: 280px;
+  height: 350px;
   background: linear-gradient(
     179.69deg,
     rgba(255, 255, 255, 0) -31.53%,
@@ -71,8 +69,8 @@ export const Box = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 198px;
-  height: 198px;
+  width: 190px;
+  height: 190px;
   margin-top: -130px;
   mix-blend-mode: multiply;
 `;

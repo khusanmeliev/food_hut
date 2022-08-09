@@ -1,4 +1,5 @@
 import React from "react";
+import colors from "../../assets/styles/colors";
 import Button from "../../components/Button/Button";
 import Flexbox from "../../components/Flexbox/Flexbox";
 import Heading from "../../components/Heading/Heading";
@@ -33,17 +34,17 @@ const Menu = () => {
             <Flexbox wd="100%" hg="15%" background="blue">
               fsdfs
             </Flexbox>
-            <Heading size="sm" align="center" color="red">
+            <Heading size="sm" align="center">
               Kebab
             </Heading>
-            <Text align="center" wd="80%">
+            <Text size="15px" align="center" wd="80%">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry
             </Text>
             <Button
               wd="131px"
               borderRadius="100px"
-              style={{ marginTop: "370px", position: "absolute" }}
+              style={{ marginTop: "350px", position: "absolute" }}
             >
               Order Now
             </Button>
