@@ -10,7 +10,7 @@ const Flexbox = styled.div`
   width: ${({ wd }) => wd};
   height: ${({ hg }) => hg};
   border-radius: ${({ borderRadius }) => borderRadius || "50%"};
-  background-color: ${({ background }) => background};
+  background-color: ${({ backgroundColor }) => backgroundColor};
 `;
 
 export default Flexbox;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Wrapper } from "./Offer.style";
+import { Box, Image, Wrapper } from "./Offer.style";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
 import Flexbox from "../../components/Flexbox/Flexbox";
@@ -20,14 +20,26 @@ const Offer = () => {
       </Flexbox>
 
       <Flexbox wd="100%" hg="500px">
-        <Box>
-          <Flexbox
-            wd="200px"
-            hg="200px"
-            background="hsla(0, 0%, 77%, 1)"
-            style={{ display: "block", margin: "0 auto", marginTop: "-90px" }}
-          ></Flexbox>
-        </Box>
+         <Box>
+            <Image src='' alt='pic' />
+            <Flexbox wd="100%" hg="15%" background="blue">
+              fsdfs
+            </Flexbox>
+            <Heading size="sm" align="center" color="red">
+              Kebab
+            </Heading>
+            <Text align="center" wd="80%">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </Text>
+            <Button
+              wd="131px"
+              borderRadius="100px"
+              style={{ marginTop: "370px", position: "absolute" }}
+            >
+              Order Now
+            </Button>
+          </Box>
       </Flexbox>
     </Wrapper>
   );
