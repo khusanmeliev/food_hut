@@ -4,7 +4,7 @@ import Heading from "../../components/Heading/Heading";
 import { Input } from "../../components/Input/Input";
 import Text from "../../components/Text/Text";
 import { FaHeart, FaPlay } from "react-icons/fa";
-import pizzaGirl from "../../assets/img/pizzaGirl.jpg";
+import pizzaGirl from "../../assets/img/home/pizzaGirl.jpg";
 import {
   Box,
   Frame,

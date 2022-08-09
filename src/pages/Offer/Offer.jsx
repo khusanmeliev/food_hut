@@ -35,8 +35,6 @@ const Offer = () => {
              {offer.text}
             </Text>
             <Button
-              wd="131px"
-              borderRadius="100px"
               style={{ marginTop: "370px", position: "absolute" }}
             >
               Order Now

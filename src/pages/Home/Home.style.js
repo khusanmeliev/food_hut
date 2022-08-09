@@ -16,8 +16,12 @@ export const Wrapper = styled.div`
 
   ${mobile.md} {
     width: 100%;
+
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     height: 120vh;
+    padding: 0;
   }
 `;
 
@@ -31,7 +35,7 @@ export const TextsContainer = styled.div`
   gap: 15px;
 
   ${mobile.md} {
-    width: 100%;
+    width: 90%;
     height: 100%;
     gap: 20px;
   }

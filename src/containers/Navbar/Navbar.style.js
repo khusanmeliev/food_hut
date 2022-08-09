@@ -25,6 +25,7 @@ export const NavbarWrapper = styled.div`
     font-size: 40px;
   }
   ${mobile.sm} {
+    width: auto;
     input:checked ~ .menu {
       display: none;
     }
