@@ -14,6 +14,7 @@ export const foods = [
     title: "Kebab",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
   },
+
   {
     id: 2,
     img: secondPic,
