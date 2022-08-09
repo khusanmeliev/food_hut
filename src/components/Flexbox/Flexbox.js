@@ -9,8 +9,8 @@ const Flexbox = styled.div`
   flex-wrap: ${({ flexWrap }) => flexWrap};
   width: ${({ wd }) => wd};
   height: ${({ hg }) => hg};
-  border-radius: ${({ borderRadius }) => borderRadius || "50%"};
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  border-radius: ${({ borderRadius }) => borderRadius};
+  background-color: ${({ background }) => background};
 `;
 
 export default Flexbox;

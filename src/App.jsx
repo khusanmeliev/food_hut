@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./containers/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Offer from "./pages/Offer/Offer";
+import Menu from "./pages/Menu/Menu";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Offer />
+      <Menu />
     </>
   );
 };

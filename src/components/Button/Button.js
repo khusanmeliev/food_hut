@@ -5,9 +5,9 @@ const Button = styled.button`
   width: ${({ wd }) => wd || "150px"};
   height: ${({ hg }) => hg || "40px"};
   background-color: ${colors.button};
-  margin: ${({ margin }) => margin};
+  position: ${({ margin }) => margin};
+  border-radius: ${({ borderRadius }) => borderRadius || "15px"};
   color: white;
-  border-radius: 15px;
   border: none;
   cursor: pointer;
 `;

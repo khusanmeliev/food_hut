@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, Image, Wrapper } from "./Offer.style";
+import { Box, Image, Price, Wrapper } from "./Offer.style";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
 import Flexbox from "../../components/Flexbox/Flexbox";
-import Button from "../../components/Button/Button";
-
+import Button from '../../components/Button/Button';
+import offerMenu from "../../mock/offerMenu";
 const Offer = () => {
   return (
     <Wrapper>
@@ -19,18 +19,20 @@ const Offer = () => {
         </Text>
       </Flexbox>
 
-      <Flexbox wd="100%" hg="500px">
-         <Box>
-            <Image src='' alt='pic' />
-            <Flexbox wd="100%" hg="15%" background="blue">
-              fsdfs
+      <Flexbox wd="100%" hg="auto" row style={{marginTop:'90px'}} flexWrap='wrap'>
+        {offerMenu.map((offer) => (
+          <>
+           <Box key={offer.id}>
+            <Image src={offer.img} alt='pic' />
+            <Price>{offer.price}$</Price>
+            <Flexbox wd="100%" hg="15%" flexWrap>
+              
             </Flexbox>
             <Heading size="sm" align="center" color="red">
-              Kebab
+              {offer.title}
             </Heading>
             <Text align="center" wd="80%">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+             {offer.text}
             </Text>
             <Button
               wd="131px"
@@ -39,7 +41,8 @@ const Offer = () => {
             >
               Order Now
             </Button>
-          </Box>
+          </Box></>
+        ))}
       </Flexbox>
     </Wrapper>
   );

@@ -15,13 +15,14 @@ const headingSize = {
 };
 
 const Heading = styled.h1`
-  ${({ size }) => headingSize[size || "md"]};
+  ${({ size }) => headingSize[size || "md"] || size};
   color: ${({ color }) => color || colors.heading.black};
   text-align: ${({ align }) => align};
   margin: 0;
-  ${mobile} {
-  font-size: 45px;
-  }
+
+  /* ${mobile} {
+    font-size: 45px;
+  } */
 `;
 
 export default Heading;
