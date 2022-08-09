@@ -5,6 +5,7 @@ const colors = {
   background: "#f1fcf4",
   text: { black: "#191919", white: "#fff" },
   heading: { black: "#191919", white: "#fff" },
+  span: { red: "#f54748", yellow: "#FDC55E" },
 };
 
 export default colors;

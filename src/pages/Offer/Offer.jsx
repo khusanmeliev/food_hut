@@ -3,7 +3,6 @@ import { Box, Wrapper } from "./Offer.style";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
 import Flexbox from "../../components/Flexbox/Flexbox";
-import Button from "../../components/Button/Button";
 
 const Offer = () => {
   return (

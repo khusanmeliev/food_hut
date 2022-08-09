@@ -29,14 +29,13 @@ export const TextsContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 15px;
+
   ${mobile.md} {
     width: 100%;
     height: 100%;
     gap: 20px;
   }
-  span {
-    color: #f54748;
-  }
+
   input {
     width: 90%;
     height: 40px;
