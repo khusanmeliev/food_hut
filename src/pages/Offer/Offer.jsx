@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, Image, Price, Wrapper } from "./Offer.style";
+import { Box, Image, Price, RateBox, Wrapper } from "./Offer.style";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
 import Flexbox from "../../components/Flexbox/Flexbox";
 import Button from '../../components/Button/Button';
 import offerMenu from "../../mock/offerMenu";
+import {FaStar} from 'react-icons/fa'
 const Offer = () => {
   return (
     <Wrapper>
@@ -25,8 +26,12 @@ const Offer = () => {
            <Box key={offer.id}>
             <Image src={offer.img} alt='pic' />
             <Price>{offer.price}$</Price>
-            <Flexbox wd="100%" hg="15%" flexWrap>
-              
+            <Flexbox wd="100%" hg="15%" flexWrap row style={{marginTop:'20px'}}>
+                <RateBox></RateBox>
+                <RateBox></RateBox>
+                <RateBox></RateBox>
+                <FaStar />
+                <Text>({offer.rate})</Text>
             </Flexbox>
             <Heading size="sm" align="center" color="red">
               {offer.title}
@@ -35,7 +40,7 @@ const Offer = () => {
              {offer.text}
             </Text>
             <Button
-              style={{ marginTop: "370px", position: "absolute" }}
+              style={{ marginTop: "395px", position: "absolute" }}
             >
               Order Now
             </Button>
