@@ -4,7 +4,6 @@ import second from "../../assets/img/offer/2.jpg";
 import third from "../../assets/img/offer/3.jpg";
 import mobile from "../../assets/styles/size";
 import Button from "../../components/Button/Button";
-import colors from "../../assets/styles/colors";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -16,7 +15,7 @@ export const Wrapper = styled.div`
   margin-top: 80px;
 `;
 
-export const FoodMenu = styled.div`
+export const Buttons = styled.div`
   width: 80%;
   height: 300px;
   display: flex;
@@ -25,7 +24,7 @@ export const FoodMenu = styled.div`
   flex-direction: column;
 
   span {
-    color: ${colors.span.red};
+    color: ${({ theme }) => theme.red};
   }
 `;
 
@@ -37,7 +36,7 @@ export const BTN = styled(Button)`
   border: 1px solid black;
 
   &:hover {
-    background-color: ${colors.red};
+    background-color: ${({ theme }) => theme.red};
     color: white;
   }
 `;

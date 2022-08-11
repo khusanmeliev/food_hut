@@ -1,9 +1,9 @@
-import firstPic from "../assets/img/foodsMenu/1.jpg";
-import secondPic from "../assets/img/foodsMenu/2.jpg";
-import thirdPic from "../assets/img/foodsMenu/3.jpg";
-import fourthPic from "../assets/img/foodsMenu/4.jpg";
+import firstPic from "../assets/img/foods/1.jpg";
+import secondPic from "../assets/img/foods/2.jpg";
+import thirdPic from "../assets/img/foods/3.jpg";
+import fourthPic from "../assets/img/foods/4.jpg";
 
-const offerMenu = [
+const offers = [
   {
     id: 1,
     img: firstPic,
@@ -38,4 +38,4 @@ const offerMenu = [
   },
 ];
 
-export default offerMenu;
+export default offers;

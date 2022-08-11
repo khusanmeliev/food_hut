@@ -1,19 +1,28 @@
-import React from "react";
-import Navbar from "./containers/Navbar/Navbar";
-import Home from "./pages/Home/Home";
-import Offer from "./pages/Offer/Offer";
-import Menu from "./pages/Menu/Menu";
-import MobileApp from "./pages/MooblieApp/MobileApp";
+import React, { createContext } from "react";
+import Header from "./components/Layouts/Header/Header";
+import OfferSection from "./pages/OfferSection/OfferSection";
+import MenuSection from "./pages/MenuSection/MenuSection";
+import AppAdvertSection from "./pages/AppAdvertSection/AppAdvertSection";
+import { darkTheme, lightTheme } from "./assets/styles/colors";
+import useTheme from "./hooks/useTheme";
+import { ThemeProvider } from "styled-components";
+
+export const ThemeContext = createContext();
 
 const App = () => {
+  const { theme, toggleTheme } = useTheme();
+  const currentTheme = theme === "light" ? lightTheme : darkTheme;
+
   return (
-    <>
-      <Navbar />
-      {/* <Home /> */}
-      <Offer />
-      <Menu />
-      <MobileApp />
-    </>
+    <ThemeContext.Provider value={{ theme: theme, toggleTheme: toggleTheme }}>
+      <ThemeProvider theme={currentTheme}>
+        <Header />
+        {/* <MainSection /> */}
+        <OfferSection />
+        <MenuSection />
+        <AppAdvertSection />
+      </ThemeProvider>
+    </ThemeContext.Provider>
   );
 };
 

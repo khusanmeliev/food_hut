@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import colors from "../../assets/styles/colors";
-import mobile from "../../assets/styles/size";
+import { COLORS } from "../../../assets/styles/colors";
+import mobile from "../../../assets/styles/size";
 
 export const NavbarWrapper = styled.div`
   position: fixed;
   width: 100%;
   height: 80px;
-  background: ${colors.navbar};
+  background: ${({ theme }) => theme.navbar};
   transition: 0.5s;
   padding: 0 60px;
   box-sizing: border-box;
@@ -39,7 +39,7 @@ export const Logo = styled.h1`
   width: fit-content;
   font-size: 28px;
   font-family: "Marcellus SC", serif;
-  color: ${colors.text.black};
+  color: ${({ theme }) => theme.text};
   display: flex;
   flex-direction: column;
   span {
@@ -55,7 +55,7 @@ export const List = styled.li`
   padding: 5px 14px;
   display: inline;
   cursor: pointer;
-  color: ${colors.text.black};
+  color: ${({ theme }) => theme.text};
   &:hover {
     transition: 0.3s ease;
     ${mobile} {

@@ -1,11 +1,10 @@
 import React from "react";
 import Button from "../../components/Button/Button";
-import Flexbox from "../../components/Flexbox/Flexbox";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
-import { Details, Wrapper } from "./MobileApp.style";
+import { Details, Wrapper } from "./styles";
 
-const MobileApp = () => {
+const AppAdvertSection = () => {
   return (
     <Wrapper>
       <Details>
@@ -20,12 +19,11 @@ const MobileApp = () => {
           <br />
           food delivery
         </Text>
-        <Button></Button> 
+        <Button></Button>
         <Button></Button>
       </Details>
-      <Flexbox wd="50%" hg="100%" background="pink"></Flexbox>
     </Wrapper>
   );
 };
 
-export default MobileApp;
+export default AppAdvertSection;

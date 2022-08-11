@@ -51,6 +51,7 @@ export const TextsContainer = styled.div`
     text-indent: 10px;
   }
 `;
+
 export const Rectangle = styled.div`
   width: 150px;
   height: 28px;

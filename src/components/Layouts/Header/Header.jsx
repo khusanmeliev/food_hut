@@ -1,10 +1,8 @@
 import React, { useRef, useState } from "react";
-import { List, Logo, Menu, NavbarButton, NavbarWrapper } from "./Navbar.style";
+import { List, Logo, Menu, NavbarButton, NavbarWrapper } from "./Header.style";
 import { AiOutlineMenu } from "react-icons/ai";
-import Flexbox from "../../components/Flexbox/Flexbox";
-import Button from "../../components/Button/Button";
 
-const Navbar = () => {
+const Header = () => {
   const navbar = useRef(null);
   let prevScrollpos = window.pageYOffset;
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -15,7 +13,7 @@ const Navbar = () => {
       navbar.current.style.top = "0";
     } else {
       navbar.current.style.top = "-100px";
-      navbar.current.style.backgroundColor='#fff'
+      navbar.current.style.backgroundColor = "#fff";
     }
     prevScrollpos = currentScrollPos;
   };
@@ -27,7 +25,7 @@ const Navbar = () => {
   return (
     <NavbarWrapper ref={navbar}>
       <Logo>Food Hut</Logo>
-      <Flexbox flexDirection="row">
+      <div style={{ display: "flex" }}>
         <ul>
           <NavbarButton onClick={() => setNavbarOpen(!navbarOpen)}>
             <AiOutlineMenu />
@@ -47,9 +45,9 @@ const Navbar = () => {
             </a>
           </Menu>
         </ul>
-      </Flexbox>
+      </div>
     </NavbarWrapper>
   );
 };
 
-export default Navbar;
+export default Header;

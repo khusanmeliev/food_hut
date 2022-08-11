@@ -1,21 +1,12 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import Button from "../../components/Button/Button";
-import Flexbox from "../../components/Flexbox/Flexbox";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
-import { foods } from "../../mock/foodsMenu";
-import {
-  Box,
-  BTN,
-  Buttons,
-  Image,
-  Price,
-  RateBox,
-  Wrapper,
-} from "./Menu.style";
+import { foods } from "../../mock/foods";
+import { Box, BTN, Buttons, Image, Price, RateBox, Wrapper } from "./styles";
 
-const Menu = () => {
+const MenuSection = () => {
   return (
     <Wrapper>
       <Heading align="center" style={{ marginTop: "100px" }}>
@@ -34,30 +25,34 @@ const Menu = () => {
         <BTN>Drinks</BTN>
       </Buttons>
 
-      <Flexbox
-        wd="100%"
-        hg="auto"
-        row
-        style={{ marginTop: "90px" }}
-        flexWrap="wrap"
+      <div
+        style={{
+          marginTop: "90px",
+          display: "flex",
+          flexWrap: "wrap",
+          height: "auto",
+          width: "100%",
+        }}
       >
         {foods.map((food) => (
           <Box key={food.id}>
             <Image src={food.img} alt="pic" />
             <Price>{food.price}$</Price>
-            <Flexbox
-              wd="100%"
-              hg="15%"
-              flexWrap
-              row
-              style={{ marginTop: "30px" }}
+            <div
+              style={{
+                width: "100%",
+                height: "15%",
+                marginTop: "30px",
+                display: "flex",
+                flexWrap: "wrap",
+              }}
             >
               <RateBox></RateBox>
               <RateBox></RateBox>
               <RateBox></RateBox>
               <FaStar />
               <Text size="18px">({food.rate})</Text>
-            </Flexbox>
+            </div>
             <Heading size="24px" align="center" color="red">
               {food.title}
             </Heading>
@@ -66,15 +61,15 @@ const Menu = () => {
             </Text>
             <Button
               size="16px"
-              style={{ marginTop: "350px", position: "absolute" }}
+              style={{ marginTop: "3500px", position: "absolute" }}
             >
               Order Now
             </Button>
           </Box>
         ))}
-      </Flexbox>
+      </div>
     </Wrapper>
   );
 };
 
-export default Menu;
+export default MenuSection;

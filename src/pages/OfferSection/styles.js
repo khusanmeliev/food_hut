@@ -1,8 +1,4 @@
 import styled from "styled-components";
-import first from "../../assets/img/offer/1.jpg";
-import second from "../../assets/img/offer/2.jpg";
-import third from "../../assets/img/offer/3.jpg";
-import mobile from "../../assets/styles/size";
 
 export const Wrapper = styled.div`
   width: 100%;

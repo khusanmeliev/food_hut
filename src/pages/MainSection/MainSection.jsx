@@ -5,10 +5,10 @@ import { Input } from "../../components/Input/Input";
 import Text from "../../components/Text/Text";
 import { FaHeart, FaPlay } from "react-icons/fa";
 import pizzaGirl from "../../assets/img/home/pizzaGirl.jpg";
-import first from '../../assets/img/home/1.jpg'
-import second from '../../assets/img/home/2.png'
-import third from '../../assets/img/home/3.jpg'
-import fourth from '../../assets/img/home/4.jpg'
+import first from "../../assets/img/home/1.jpg";
+import second from "../../assets/img/home/2.png";
+import third from "../../assets/img/home/3.jpg";
+import fourth from "../../assets/img/home/4.jpg";
 
 import {
   Box,
@@ -55,10 +55,10 @@ const Home = () => {
       <PicContainer>
         <Frame>
           <Box>
-            <img src={first} alt='red' />
-            <img src={second} alt='red' />
-            <img src={third} alt='red' />
-              <img src={fourth} alt='red'/>
+            <img src={first} alt="red" />
+            <img src={second} alt="red" />
+            <img src={third} alt="red" />
+            <img src={fourth} alt="red" />
           </Box>
           <img src={pizzaGirl} alt="pizzaGirl" />
         </Frame>
