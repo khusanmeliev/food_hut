@@ -1,56 +1,78 @@
 import React from "react";
-import colors from "../../assets/styles/colors";
+import { FaStar } from "react-icons/fa";
 import Button from "../../components/Button/Button";
 import Flexbox from "../../components/Flexbox/Flexbox";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
 import { foods } from "../../mock/foodsMenu";
-import { Box, BTN, FoodMenu, FoodsBox, Image, Wrapper } from "./Menu.style";
+import {
+  Box,
+  BTN,
+  Buttons,
+  Image,
+  Price,
+  RateBox,
+  Wrapper,
+} from "./Menu.style";
 
 const Menu = () => {
   return (
     <Wrapper>
-      <FoodMenu>
-        <Heading align="center">
-          <span>Menu</span> That{" "}
-          <span style={{ color: "#FDC55E" }}>Always</span> Make You <br /> Fall
-          In <span>Love</span>
-        </Heading>
-        <Flexbox wd="80%" hg="100px" justify="space-evenly" row="row">
-          <BTN>Ramen</BTN>
-          <BTN>Breakfast</BTN>
-          <BTN>Lunch</BTN>
-          <BTN>Dinner</BTN>
-          <BTN>Maxican</BTN>
-          <BTN>Italian</BTN>
-          <BTN>Desserts</BTN>
-          <BTN>Drinks</BTN>
-        </Flexbox>
-      </FoodMenu>
-      <FoodsBox>
+      <Heading align="center" style={{ marginTop: "100px" }}>
+        <span>Menu</span> That <span style={{ color: "#FDC55E" }}>Always</span>{" "}
+        Make You <br /> Fall In <span>Love</span>
+      </Heading>
+
+      <Buttons>
+        <BTN>Ramen</BTN>
+        <BTN>Breakfast</BTN>
+        <BTN>Lunch</BTN>
+        <BTN>Dinner</BTN>
+        <BTN>Maxican</BTN>
+        <BTN>Italian</BTN>
+        <BTN>Desserts</BTN>
+        <BTN>Drinks</BTN>
+      </Buttons>
+
+      <Flexbox
+        wd="100%"
+        hg="auto"
+        row
+        style={{ marginTop: "90px" }}
+        flexWrap="wrap"
+      >
         {foods.map((food) => (
           <Box key={food.id}>
-            <Image src={food.img} />
-            <Flexbox wd="100%" hg="15%" background="blue">
-              fsdfs
+            <Image src={food.img} alt="pic" />
+            <Price>{food.price}$</Price>
+            <Flexbox
+              wd="100%"
+              hg="15%"
+              flexWrap
+              row
+              style={{ marginTop: "30px" }}
+            >
+              <RateBox></RateBox>
+              <RateBox></RateBox>
+              <RateBox></RateBox>
+              <FaStar />
+              <Text size="18px">({food.rate})</Text>
             </Flexbox>
-            <Heading size="sm" align="center">
-              Kebab
+            <Heading size="24px" align="center" color="red">
+              {food.title}
             </Heading>
-            <Text size="15px" align="center" wd="80%">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+            <Text align="center" wd="80%" size="16px">
+              {food.text}
             </Text>
             <Button
-              wd="131px"
-              borderRadius="100px"
+              size="16px"
               style={{ marginTop: "350px", position: "absolute" }}
             >
               Order Now
             </Button>
           </Box>
         ))}
-      </FoodsBox>
+      </Flexbox>
     </Wrapper>
   );
 };

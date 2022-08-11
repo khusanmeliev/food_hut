@@ -1,54 +1,47 @@
 import styled from "styled-components";
+import first from "../../assets/img/offer/1.jpg";
+import second from "../../assets/img/offer/2.jpg";
+import third from "../../assets/img/offer/3.jpg";
+import mobile from "../../assets/styles/size";
 import Button from "../../components/Button/Button";
 import colors from "../../assets/styles/colors";
 
 export const Wrapper = styled.div`
   width: 100%;
   height: auto;
-  background-color: blue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
-
-export const FoodMenu = styled.div`
-  width: 80%;
-  height: 300px;
-  background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
   span {
-    color: ${colors.span.red};
+    color: ${colors.red};
+  }
+`;
+
+export const Buttons = styled.div`
+  width: 70%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  ${mobile.lg} {
+    display: none;
   }
 `;
 
 export const BTN = styled(Button)`
   width: 98px;
   height: 44px;
-  border-radius: 100px;
   background-color: white;
   color: black;
   border: 1px solid black;
 
-  :nth-child(1) {
+  &:hover {
+    background-color: ${colors.red};
     color: white;
-    background-color: red;
-    border: none;
   }
-`;
-
-export const FoodsBox = styled.div`
-  width: 100%;
-  height: 165vh;
-  background-color: gainsboro;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
 `;
 
 export const Box = styled.div`
@@ -56,20 +49,63 @@ export const Box = styled.div`
   height: 350px;
   background: linear-gradient(
     179.69deg,
-    rgba(255, 255, 255, 0) -31.53%,
-    #f54748 303.75%
+    rgba(255, 255, 255, 0) -0.53%,
+    #f54748 703.75%
   );
+  color: #fff;
   border-radius: 20px;
-  margin: 10px;
+  margin: 100px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  svg {
+    font-size: 25px;
+    color: rgba(255, 184, 0, 1);
+  }
+  ${mobile.lg} {
+    margin: 80px 50px;
+  }
+  ${mobile.sm} {
+    width: 500px;
+  }
 `;
 
 export const Image = styled.img`
-  width: 190px;
-  height: 190px;
-  margin-top: -130px;
+  width: 178px;
+  height: 178px;
+  margin-top: -140px;
   mix-blend-mode: multiply;
+`;
+
+export const Price = styled.div`
+  width: 40px;
+  height: 40px;
+  background-color: rgba(253, 197, 94, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  margin-left: 90px;
+  margin-top: -190px;
+  font-size: 18px;
+`;
+
+export const RateBox = styled.div`
+  width: 32px;
+  height: 32px;
+  background-image: url(${first});
+  border-radius: 50%;
+  &:nth-child(2) {
+    margin-left: -15px;
+    border: 2px solid #ffffff;
+    background-image: url(${second});
+  }
+  &:nth-child(3n) {
+    margin-left: -15px;
+    border: 1px solid #fff;
+    background-image: url(${third});
+  }
 `;

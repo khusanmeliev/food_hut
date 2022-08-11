@@ -7,7 +7,7 @@ const Text = styled.p`
   color: ${colors.text.black};
   font-size: ${({ size }) => size || "20px"};
   text-align: ${({ align }) => align};
-  margin: 0;
+  margin: ${({ margin }) => margin};
 
   ${mobile} {
   }
