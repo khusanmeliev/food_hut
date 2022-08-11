@@ -25,54 +25,5 @@ export const Box = styled.div`
   );
   color: #fff;
   border-radius: 20px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  svg {
-    font-size: 40px;
-    color: rgba(255, 184, 0, 1);
-  }
-  ${mobile.lg} {
-    margin: 50px;
-  }
-`;
-
-export const Image = styled.img`
-  width: 178px;
-  height: 178px;
-  margin-top: -140px;
-  mix-blend-mode: multiply;
-`;
-
-export const Price = styled.div`
-  width: 40px;
-  height: 40px;
-  background-color: rgba(253, 197, 94, 1);
-  border-radius: 50%;
-  border: 4px solid #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  margin-left: 90px;
-  margin-top: -190px;
-`;
-
-export const RateBox = styled.div`
-  width: 35px;
-  height: 35px;
-  background-image: url(${first});
-  border-radius: 50%;
-  &:nth-child(2n) {
-    margin-left: -15px;
-    border: 1px solid #fff;
-    background-image: url(${second});
-  }
-  &:nth-child(3n) {
-    margin-left: -15px;
-    border: 1px solid #fff;
-    background-image: url(${third});
-  }
+  margin-top: 100px;
 `;

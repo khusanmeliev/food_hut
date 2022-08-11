@@ -16,8 +16,12 @@ export const Wrapper = styled.div`
 
   ${mobile.md} {
     width: 100%;
+
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     height: 120vh;
+    padding: 0;
   }
 `;
 
@@ -31,7 +35,7 @@ export const TextsContainer = styled.div`
   gap: 15px;
 
   ${mobile.md} {
-    width: 100%;
+    width: 90%;
     height: 100%;
     gap: 20px;
   }
@@ -105,10 +109,10 @@ export const Frame = styled.div`
   margin-left: 130px;
 
   img {
-    width: 260px;
+    width: 280px;
     position: absolute;
-    height: 350px;
-    margin-top: -20px;
+    height: 390px;
+    margin-top: -45px;
     mix-blend-mode: multiply;
   }
 `;
@@ -118,4 +122,16 @@ export const Box = styled.div`
   height: 350px;
   background-color: #f54748;
   border-radius: 50%;
+  display: flex;
+  gap: 20px;
+
+  img {
+    mix-blend-mode: multiply;
+    width: 100px;
+    height: 100px;
+
+    &:nth-child(2n) {
+      margin-left: 100px;
+    }
+  }
 `;

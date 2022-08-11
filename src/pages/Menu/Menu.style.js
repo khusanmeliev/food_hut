@@ -13,21 +13,19 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  span {
-    color: ${colors.red};
-  }
+  margin-top: 80px;
 `;
 
-export const Buttons = styled.div`
-  width: 70%;
-  height: 100px;
+export const FoodMenu = styled.div`
+  width: 80%;
+  height: 300px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  flex-direction: column;
 
-  ${mobile.lg} {
-    display: none;
+  span {
+    color: ${colors.span.red};
   }
 `;
 
@@ -98,7 +96,7 @@ export const RateBox = styled.div`
   height: 32px;
   background-image: url(${first});
   border-radius: 50%;
-  &:nth-child(2) {
+  &:nth-child(2n) {
     margin-left: -15px;
     border: 2px solid #ffffff;
     background-image: url(${second});

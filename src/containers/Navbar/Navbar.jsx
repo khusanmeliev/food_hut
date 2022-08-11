@@ -15,6 +15,7 @@ const Navbar = () => {
       navbar.current.style.top = "0";
     } else {
       navbar.current.style.top = "-100px";
+      navbar.current.style.backgroundColor='#fff'
     }
     prevScrollpos = currentScrollPos;
   };
