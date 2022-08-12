@@ -1,27 +1,23 @@
 import React from "react";
-import Flexbox from "../../components/Flexbox/Flexbox";
 import Heading from "../../components/Heading/Heading";
 import { Input } from "../../components/Input/Input";
 import Text from "../../components/Text/Text";
 import { FaHeart, FaPlay } from "react-icons/fa";
 import pizzaGirl from "../../assets/img/home/pizzaGirl.jpg";
-import first from "../../assets/img/home/1.jpg";
-import second from "../../assets/img/home/2.png";
-import third from "../../assets/img/home/3.jpg";
-import fourth from "../../assets/img/home/4.jpg";
 
 import {
+  Wrapper,
   Box,
+  DownloadBtn,
   Frame,
   PicContainer,
   PlayIcon,
   Rectangle,
   TextsContainer,
-  Wrapper,
-} from "./Home.style";
+} from "./styles";
 import Button from "../../components/Button/Button";
 
-const Home = () => {
+const MainSection = () => {
   return (
     <Wrapper>
       <TextsContainer>
@@ -42,23 +38,22 @@ const Home = () => {
 
         <Input type="text" placeholder="Search Food" />
 
-        <Flexbox wd="100%" row gap="15px" justify="flex-start">
+        <DownloadBtn>
           <Button>Downlode App</Button>
-
           <PlayIcon>
             <FaPlay />
           </PlayIcon>
           <Text>Watch Video</Text>
-        </Flexbox>
+        </DownloadBtn>
       </TextsContainer>
 
       <PicContainer>
         <Frame>
           <Box>
-            <img src={first} alt="red" />
+            {/* <img src={first} alt="red" />
             <img src={second} alt="red" />
             <img src={third} alt="red" />
-            <img src={fourth} alt="red" />
+            <img src={fourth} alt="red" /> */}
           </Box>
           <img src={pizzaGirl} alt="pizzaGirl" />
         </Frame>
@@ -67,4 +62,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MainSection;

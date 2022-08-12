@@ -1,10 +1,20 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import Button from "../../components/Button/Button";
+import ButtonWrapper from "../../components/Button/styles";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
 import { foods } from "../../mock/foods";
-import { Box, BTN, Buttons, Image, Price, RateBox, Wrapper } from "./styles";
+import {
+  Box,
+  BTN,
+  Buttons,
+  Circle,
+  Image,
+  Price,
+  RateBox,
+  Wrapper,
+} from "./styles";
 
 const MenuSection = () => {
   return (
@@ -36,14 +46,18 @@ const MenuSection = () => {
       >
         {foods.map((food) => (
           <Box key={food.id}>
-            <Image src={food.img} alt="pic" />
+            <Circle>
+              <Image src={food.img} alt="pic" />
+            </Circle>
             <Price>{food.price}$</Price>
             <div
               style={{
                 width: "100%",
-                height: "15%",
-                marginTop: "30px",
+                height: "10%",
+                marginTop: "70px",
                 display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 flexWrap: "wrap",
               }}
             >
@@ -53,18 +67,26 @@ const MenuSection = () => {
               <FaStar />
               <Text size="18px">({food.rate})</Text>
             </div>
-            <Heading size="24px" align="center" color="red">
-              {food.title}
+            <Heading
+              size="24px"
+              align="center"
+              margin="10px"
+              style={{ marginTop: "50px", fontWeight: "600" }}
+            >
+              {food.name}
             </Heading>
-            <Text align="center" wd="80%" size="16px">
-              {food.text}
+            <Text size="16px" align="center" width="80%">
+              {food.description}
             </Text>
-            <Button
+            <ButtonWrapper
               size="16px"
-              style={{ marginTop: "3500px", position: "absolute" }}
+              style={{
+                marginTop: "350px",
+                position: "absolute",
+              }}
             >
               Order Now
-            </Button>
+            </ButtonWrapper>
           </Box>
         ))}
       </div>

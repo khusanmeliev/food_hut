@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import { COLORS } from "../../../assets/styles/colors";
 import mobile from "../../../assets/styles/size";
 
 export const NavbarWrapper = styled.div`
   position: fixed;
   width: 100%;
   height: 80px;
-  background: ${({ theme }) => theme.navbar};
   transition: 0.5s;
   padding: 0 60px;
   box-sizing: border-box;
@@ -14,6 +12,8 @@ export const NavbarWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: ${({ theme }) => theme.background};
+
   a {
     text-decoration: none;
   }

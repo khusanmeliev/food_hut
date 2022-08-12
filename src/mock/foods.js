@@ -13,8 +13,9 @@ export const foods = [
     img: firstPic,
     price: "10",
     rate: "4.5",
-    title: "Kebab",
-    text: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
+    name: "Kebab",
+    description:
+      "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
   },
 
   {
@@ -22,55 +23,62 @@ export const foods = [
     img: secondPic,
     price: "10",
     rate: "4.5",
-    title: "Kebab",
-    text: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
+    name: "Kebab",
+    description:
+      "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
   },
   {
     id: 3,
     img: thirdPic,
     price: "10",
     rate: "4.5",
-    title: "Kebab",
-    text: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
+    name: "Kebab",
+    description:
+      "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
   },
   {
     id: 4,
     img: fourthPic,
     price: "10",
     rate: "4.5",
-    title: "Kebab",
-    text: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
+    name: "Kebab",
+    description:
+      "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
   },
   {
     id: 5,
     img: fifthPic,
     price: "10",
     rate: "4.5",
-    title: "Kebab",
-    text: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
+    name: "Kebab",
+    description:
+      "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
   },
   {
     id: 6,
     img: sixthPic,
     price: "10",
     rate: "4.5",
-    title: "Kebab",
-    text: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
+    name: "Kebab",
+    description:
+      "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
   },
   {
     id: 7,
     img: seventhPic,
     price: "10",
     rate: "4.5",
-    title: "Kebab",
-    text: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
+    name: "Kebab",
+    description:
+      "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
   },
   {
     id: 8,
     img: eightthPic,
     price: "10",
     rate: "4.5",
-    title: "Kebab",
-    text: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
+    name: "Kebab",
+    description:
+      "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry",
   },
 ];

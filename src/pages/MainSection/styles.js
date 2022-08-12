@@ -5,14 +5,10 @@ export const Wrapper = styled.div`
   height: 80vh;
   margin-top: 80px;
   padding: 20px 80px 80px 80px;
-  background: linear-gradient(
-    180deg,
-    rgba(245, 71, 72, 0.06) 0%,
-    rgba(245, 71, 72, 0) 100%
-  );
   display: flex;
   gap: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  background: ${({ theme }) => theme.background};
 
   ${mobile.md} {
     width: 100%;
@@ -135,4 +131,13 @@ export const Box = styled.div`
       margin-left: 100px;
     }
   }
+`;
+
+export const DownloadBtn = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 15px;
 `;

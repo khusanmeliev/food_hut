@@ -1,9 +1,24 @@
 import React from "react";
-import { Box, Wrapper } from "./styles";
+import {
+  Box,
+  Frame,
+  Image,
+  OffersTexts,
+  Pic,
+  PicBox,
+  Price,
+  RateBox,
+  Texts,
+  Wrapper,
+} from "./styles";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
+import offers from "../../mock/offers";
+import { FaStar } from "react-icons/fa";
+import ButtonWrapper from "../../components/Button/styles";
+import pizzaGirl from "../../assets/img/home/pizzaGirl.jpg";
 
 const OfferSection = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -28,8 +43,80 @@ const OfferSection = () => {
         </Text>
         <button onClick={toggleTheme}>toggle: {theme}</button>
       </div>
+      <div
+        style={{
+          marginTop: "90px",
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          height: "auto",
+          width: "100%",
+        }}
+      >
+        {offers.map((offer) => (
+          <Box key={offer.id}>
+            <Image src={offer.img} alt="pic" />
+            <Price>{offer.price}$</Price>
+            <div
+              style={{
+                width: "100%",
+                height: "10%",
+                marginTop: "15px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <RateBox></RateBox>
+              <RateBox></RateBox>
+              <RateBox></RateBox>
+              <FaStar />
+              <Text>({offer.rate})</Text>
+            </div>
+            <Heading align="center" size="sm" style={{ marginTop: "30px" }}>
+              {offer.name}
+            </Heading>
+            <Text align="center" width="80%">
+              {offer.description}
+            </Text>
+            <ButtonWrapper
+              size="16px"
+              style={{
+                marginTop: "320px",
+                position: "absolute",
+              }}
+            >
+              Order Now
+            </ButtonWrapper>
+          </Box>
+        ))}
+      </div>
 
-      <Box></Box>
+      <OffersTexts>
+        <Pic>
+          <Frame>
+            <PicBox></PicBox>
+            <img src={pizzaGirl} alt="pizzaGirl" />
+          </Frame>
+        </Pic>
+
+        <Texts>
+          <Heading>
+            We are <span style={{ color: "hsla(360, 90%, 62%, 1)" }}>more</span>{" "}
+            than
+            <span style={{ color: "hsla(39, 98%, 68%, 1)" }}>
+              multiple
+            </span>{" "}
+            services
+          </Heading>
+          <Text>
+            This is a type of resturent which typically serves food and drink,
+            in addition to light refreshments such as baked goods or snacks. The
+            term comes frome the rench word meaning food
+          </Text>
+        </Texts>
+      </OffersTexts>
     </Wrapper>
   );
 };

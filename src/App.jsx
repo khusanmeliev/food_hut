@@ -6,6 +6,7 @@ import AppAdvertSection from "./pages/AppAdvertSection/AppAdvertSection";
 import { darkTheme, lightTheme } from "./assets/styles/colors";
 import useTheme from "./hooks/useTheme";
 import { ThemeProvider } from "styled-components";
+import MainSection from "./pages/MainSection/MainSection";
 
 export const ThemeContext = createContext();
 
@@ -17,7 +18,7 @@ const App = () => {
     <ThemeContext.Provider value={{ theme: theme, toggleTheme: toggleTheme }}>
       <ThemeProvider theme={currentTheme}>
         <Header />
-        {/* <MainSection /> */}
+        <MainSection />
         <OfferSection />
         <MenuSection />
         <AppAdvertSection />

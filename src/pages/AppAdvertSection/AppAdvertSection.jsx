@@ -1,8 +1,9 @@
 import React from "react";
-import Button from "../../components/Button/Button";
+import ButtonWrapper from "../../components/Button/styles";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
-import { Details, Wrapper } from "./styles";
+import { Buttons, Details, ImageBox, Wrapper } from "./styles";
+import owpaz from "../../assets/img/owpaz.jpg";
 
 const AppAdvertSection = () => {
   return (
@@ -19,9 +20,18 @@ const AppAdvertSection = () => {
           <br />
           food delivery
         </Text>
-        <Button></Button>
-        <Button></Button>
+        <Buttons>
+          <ButtonWrapper width="135px" borderRadius="5px"></ButtonWrapper>
+          <ButtonWrapper
+            width="120px"
+            borderRadius="7px"
+            style={{ margin: "0px 40px", borderRadius: "7px" }}
+          ></ButtonWrapper>
+        </Buttons>
       </Details>
+      <ImageBox>
+        <img src={owpaz} alt="pic" />
+      </ImageBox>
     </Wrapper>
   );
 };

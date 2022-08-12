@@ -15,10 +15,9 @@ const headingSize = {
 
 const Heading = styled.h1`
   ${({ size }) => headingSize[size || "md"] || size};
-  color: ${({ theme }) => theme.heading};
+  color: ${({ theme }) => theme.heading || theme};
   text-align: ${({ align }) => align};
-  margin: 0;
-
+  margin: ${({ margin }) => margin};
   /* ${mobile} {
     font-size: 45px;
   } */

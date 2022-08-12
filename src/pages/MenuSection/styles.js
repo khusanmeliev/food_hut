@@ -3,7 +3,7 @@ import first from "../../assets/img/offer/1.jpg";
 import second from "../../assets/img/offer/2.jpg";
 import third from "../../assets/img/offer/3.jpg";
 import mobile from "../../assets/styles/size";
-import Button from "../../components/Button/Button";
+import ButtonWrapper from "../../components/Button/styles";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -13,25 +13,24 @@ export const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 80px;
+  background: ${({ theme }) => theme.background};
 `;
 
 export const Buttons = styled.div`
-  width: 80%;
-  height: 300px;
+  width: 70%;
+  height: 150px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-around;
 
-  span {
-    color: ${({ theme }) => theme.red};
+  ${mobile.lg} {
+    display: none;
   }
 `;
 
-export const BTN = styled(Button)`
+export const BTN = styled(ButtonWrapper)`
   width: 98px;
   height: 44px;
-  background-color: white;
   color: black;
   border: 1px solid black;
 
@@ -56,22 +55,44 @@ export const Box = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: "Sofia Pro";
+  font-weight: 400;
+  line-height: 21px;
+
   svg {
     font-size: 25px;
     color: rgba(255, 184, 0, 1);
   }
+
+  span {
+    color: ${({ theme }) => theme.red};
+  }
+
   ${mobile.lg} {
     margin: 80px 50px;
   }
+
   ${mobile.sm} {
     width: 500px;
   }
 `;
 
+export const Circle = styled.div`
+  box-sizing: border-box;
+  position: absolute;
+  background-color: red;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -350px;
+  border-radius: 50%;
+`;
+
 export const Image = styled.img`
   width: 178px;
   height: 178px;
-  margin-top: -140px;
   mix-blend-mode: multiply;
 `;
 
@@ -83,10 +104,10 @@ export const Price = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  border: 4px solid #fff;
+  border: 3px solid #fff;
   border-radius: 50%;
   margin-left: 90px;
-  margin-top: -190px;
+  margin-top: -278px;
   font-size: 18px;
 `;
 
