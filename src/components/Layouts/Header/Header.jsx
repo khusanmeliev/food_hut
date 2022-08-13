@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { List, Logo, Menu, NavbarButton, NavbarWrapper } from "./Header.style";
+import { List, Logo, Menu, NavbarButton, NavbarWrapper } from "./styles";
 import { AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {

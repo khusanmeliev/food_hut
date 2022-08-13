@@ -18,9 +18,10 @@ const Heading = styled.h1`
   color: ${({ theme }) => theme.heading || theme};
   text-align: ${({ align }) => align};
   margin: ${({ margin }) => margin};
-  /* ${mobile} {
-    font-size: 45px;
-  } */
+
+  ${mobile.md} {
+    font-size: 40px;
+  }
 `;
 
 export default Heading;

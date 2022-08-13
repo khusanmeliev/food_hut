@@ -2,22 +2,17 @@ import styled from "styled-components";
 import mobile from "../../assets/styles/size";
 
 export const Wrapper = styled.div`
-  height: 80vh;
   margin-top: 80px;
   padding: 20px 80px 80px 80px;
   display: flex;
   gap: 20px;
   font-family: Arial, Helvetica, sans-serif;
   background: ${({ theme }) => theme.background};
-
   ${mobile.md} {
-    width: 100%;
-
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 120vh;
-    padding: 0;
+    padding: 20px 0px;
   }
 `;
 
@@ -28,12 +23,10 @@ export const TextsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 15px;
-
-  ${mobile.md} {
+  ${mobile.lg} {
     width: 90%;
     height: 100%;
-    gap: 20px;
+    gap: 0px;
   }
 
   input {
@@ -45,6 +38,9 @@ export const TextsContainer = styled.div`
     outline: none;
     border-radius: 100px;
     text-indent: 10px;
+    ${mobile.lg} {
+      margin-top: 10px;
+    }
   }
 `;
 
@@ -64,24 +60,6 @@ export const Rectangle = styled.div`
   }
 `;
 
-export const PlayIcon = styled.div`
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin-left: 50px;
-  cursor: pointer;
-
-  svg {
-    color: #f54748;
-    font-size: 18px;
-    cursor: pointer;
-  }
-`;
-
 export const PicContainer = styled.div`
   width: 60%;
   height: 100%;
@@ -90,7 +68,7 @@ export const PicContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  ${mobile.md} {
+  ${mobile.lg} {
     display: none;
   }
 `;
@@ -140,4 +118,45 @@ export const DownloadBtn = styled.div`
   justify-content: flex-start;
   flex-direction: row;
   gap: 15px;
+
+  ${mobile.lg} {
+    gap: 0px;
+    margin-top: 20px;
+  }
+
+  p {
+    ${mobile.lg} {
+      font-size: 18px;
+      margin-left: 8px;
+    }
+  }
+
+  button {
+    ${mobile.md} {
+      width: 120px;
+    }
+  }
+`;
+
+export const PlayIcon = styled.div`
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  box-shadow: ${({ theme }) => theme.playIconBoxShadow};
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-left: 50px;
+  cursor: pointer;
+
+  ${mobile.lg} {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  svg {
+    color: #f54748;
+    font-size: 18px;
+    cursor: pointer;
+  }
 `;

@@ -80,14 +80,16 @@ export const Box = styled.div`
 export const Circle = styled.div`
   box-sizing: border-box;
   position: absolute;
-  background-color: red;
-  width: 220px;
-  height: 220px;
+  width: 210px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: -350px;
-  border-radius: 50%;
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  border: 10px solid gray;
+  border-bottom: 0;
 `;
 
 export const Image = styled.img`
@@ -107,7 +109,7 @@ export const Price = styled.div`
   border: 3px solid #fff;
   border-radius: 50%;
   margin-left: 90px;
-  margin-top: -278px;
+  margin-top: -205px;
   font-size: 18px;
 `;
 
@@ -118,7 +120,7 @@ export const RateBox = styled.div`
   border-radius: 50%;
   &:nth-child(2n) {
     margin-left: -15px;
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
     background-image: url(${second});
   }
   &:nth-child(3n) {

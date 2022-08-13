@@ -37,11 +37,13 @@ const MenuSection = () => {
 
       <div
         style={{
+          width: "100%",
           marginTop: "90px",
           display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           flexWrap: "wrap",
           height: "auto",
-          width: "100%",
         }}
       >
         {foods.map((food) => (

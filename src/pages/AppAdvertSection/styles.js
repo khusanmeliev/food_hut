@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import mobile from "../../assets/styles/size";
+import ButtonWrapper from "../../components/Button/styles";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -11,6 +13,13 @@ export const Wrapper = styled.div`
   span {
     color: ${({ theme }) => theme.red};
   }
+
+  ${mobile.lg} {
+    width: 100%;
+    height: 1000px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 `;
 
 export const Details = styled.div`
@@ -19,6 +28,10 @@ export const Details = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  ${mobile.lg} {
+    width: 95%;
+  }
 `;
 
 export const Buttons = styled.div`
@@ -26,6 +39,18 @@ export const Buttons = styled.div`
   height: 20%;
   display: flex;
   align-items: center;
+`;
+
+export const Button = styled(ButtonWrapper)`
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+
+  svg {
+    font-size: 30px;
+  }
 `;
 
 export const ImageBox = styled.div`
@@ -36,11 +61,24 @@ export const ImageBox = styled.div`
   align-items: flex-end;
   justify-content: flex-end;
 
+  ${mobile.lg} {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   img {
     width: 370px;
     height: 370px;
-    /* mix-blend-mode: multiply; */
     border-radius: 50%;
-    margin-left: -100px;
+    margin-left: -70px;
+    position: absolute;
+
+    ${mobile.lg} {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+    }
   }
 `;

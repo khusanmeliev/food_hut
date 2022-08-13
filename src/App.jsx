@@ -7,6 +7,7 @@ import { darkTheme, lightTheme } from "./assets/styles/colors";
 import useTheme from "./hooks/useTheme";
 import { ThemeProvider } from "styled-components";
 import MainSection from "./pages/MainSection/MainSection";
+import Footer from "./components/Layouts/Footer/Footer";
 
 export const ThemeContext = createContext();
 
@@ -18,10 +19,11 @@ const App = () => {
     <ThemeContext.Provider value={{ theme: theme, toggleTheme: toggleTheme }}>
       <ThemeProvider theme={currentTheme}>
         <Header />
-        <MainSection />
-        <OfferSection />
+        {/* <MainSection /> */}
+        {/* <OfferSection /> */}
         <MenuSection />
         <AppAdvertSection />
+        <Footer />
       </ThemeProvider>
     </ThemeContext.Provider>
   );

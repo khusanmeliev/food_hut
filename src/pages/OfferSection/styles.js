@@ -17,11 +17,7 @@ export const Wrapper = styled.div`
 export const Box = styled.div`
   width: 280px;
   height: 320px;
-  background: linear-gradient(
-    179.69deg,
-    rgba(255, 255, 255, 0) -0.53%,
-    #f54748 703.75%
-  );
+  background: ${({ theme }) => theme.offerBox};
   color: #fff;
   border-radius: 20px;
   margin: 100px 10px;
@@ -41,13 +37,14 @@ export const Box = styled.div`
   span {
     color: ${({ theme }) => theme.red};
   }
-
-  ${mobile.lg} {
-    margin: 80px 50px;
+  h1 {
+    ${mobile.lg} {
+      font-size: 30px;
+    }
   }
 
-  ${mobile.sm} {
-    width: 500px;
+  ${mobile.lg} {
+    width: 90%;
   }
 `;
 
@@ -99,6 +96,10 @@ export const OffersTexts = styled.div`
 
 export const Pic = styled.div`
   width: 40%;
+
+  ${mobile.lg} {
+    display: none;
+  }
 `;
 export const Frame = styled.div`
   width: 390px;
@@ -143,4 +144,27 @@ export const Texts = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  ${mobile.lg} {
+    width: 100%;
+  }
+`;
+
+export const Txt = styled.div`
+  width: 80%;
+`;
+export const Row = styled.div`
+  display: grid;
+  grid-template-columns: 320px 300px;
+
+  ${mobile.lg} {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    ${mobile.lg} {
+      font-size: 18px;
+    }
+  }
 `;

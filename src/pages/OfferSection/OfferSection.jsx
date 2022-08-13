@@ -8,14 +8,16 @@ import {
   PicBox,
   Price,
   RateBox,
+  Row,
   Texts,
+  Txt,
   Wrapper,
 } from "./styles";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
-import offers from "../../mock/offers";
+import { offers, offerTexts } from "../../mock/offers";
 import { FaStar } from "react-icons/fa";
 import ButtonWrapper from "../../components/Button/styles";
 import pizzaGirl from "../../assets/img/home/pizzaGirl.jpg";
@@ -30,13 +32,14 @@ const OfferSection = () => {
           display: "flex",
           flexDirection: "column",
           gap: "20px",
-          width: "70%",
+          width: "80%",
+          background: `${({ theme }) => theme.background}`,
         }}
       >
-        <Heading>
+        <Heading margin="0">
           Today <span style={{ color: "#F54748" }}>Special</span> Offers
         </Heading>
-        <Text>
+        <Text margin="0">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s
@@ -45,7 +48,7 @@ const OfferSection = () => {
       </div>
       <div
         style={{
-          marginTop: "90px",
+          marginTop: "100px",
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
@@ -98,6 +101,7 @@ const OfferSection = () => {
           <Frame>
             <PicBox></PicBox>
             <img src={pizzaGirl} alt="pizzaGirl" />
+            <Text>Online order</Text>
           </Frame>
         </Pic>
 
@@ -115,6 +119,20 @@ const OfferSection = () => {
             in addition to light refreshments such as baked goods or snacks. The
             term comes frome the rench word meaning food
           </Text>
+          <Txt>
+            <Row>
+              {offerTexts.map((txt) => (
+                <div style={{ display: "flex", gap: "5px" }}>
+                  <img
+                    src={txt.img}
+                    alt="order"
+                    style={{ width: "30px", height: "30px", marginTop: "20px" }}
+                  />
+                  <Text>{txt.text}</Text>
+                </div>
+              ))}
+            </Row>
+          </Txt>
         </Texts>
       </OffersTexts>
     </Wrapper>

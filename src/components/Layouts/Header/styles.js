@@ -25,7 +25,7 @@ export const NavbarWrapper = styled.div`
     font-size: 40px;
   }
   ${mobile.sm} {
-    width: auto;
+    width: 100%;
     input:checked ~ .menu {
       display: none;
     }
@@ -66,7 +66,6 @@ export const List = styled.li`
   ${mobile.sm} {
     font-family: "Roboto Slab", serif;
     font-size: 18px;
-    color: white;
   }
 `;
 
