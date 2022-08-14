@@ -25,7 +25,6 @@ export const NavbarWrapper = styled.div`
     font-size: 40px;
   }
   ${mobile.sm} {
-    width: 100%;
     input:checked ~ .menu {
       display: none;
     }
@@ -37,18 +36,18 @@ export const NavbarWrapper = styled.div`
 
 export const Logo = styled.h1`
   width: fit-content;
-  font-size: 28px;
-  font-family: "Marcellus SC", serif;
-  color: ${({ theme }) => theme.text};
   display: flex;
   flex-direction: column;
-  span {
-    font-size: 14px;
+  padding: 0px 60px;
+
+  ${mobile.lg} {
+    padding: 0px;
   }
-  ${mobile.sm} {
-    font-size: 24px;
-    text-align: center;
-  }
+`;
+
+export const LogoImage = styled.img`
+  width: 130px;
+  mix-blend-mode: multiply;
 `;
 
 export const List = styled.li`

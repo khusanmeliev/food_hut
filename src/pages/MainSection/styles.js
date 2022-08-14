@@ -66,57 +66,41 @@ export const Rectangle = styled.div`
 
 export const Title = styled.h1`
   font-size: 40px;
+  color: ${({ theme }) => theme.text};
 `;
 
-export const PicContainer = styled.div`
+export const PictureContainer = styled.div`
   width: 60%;
   height: 100%;
   background-color: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   ${mobile.lg} {
     display: none;
   }
 `;
-
-export const Frame = styled.div`
-  width: 390px;
-  height: 390px;
-  background: linear-gradient(rgba(245, 71, 72, 0), rgba(253, 197, 94, 1));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 130px;
-
-  img {
-    width: 280px;
-    position: absolute;
-    height: 390px;
-    margin-top: -45px;
-    mix-blend-mode: multiply;
-  }
+export const LeafImage = styled.img`
+  width: 100px;
+  mix-blend-mode: multiply;
+  position: absolute;
+  margin-top: -148px;
+  margin-left: 100px;
+  transform: rotate(-8deg);
 `;
 
-export const Box = styled.div`
-  width: 350px;
-  height: 350px;
-  background-color: #f54748;
-  border-radius: 50%;
-  display: flex;
-  gap: 20px;
+export const PizzaImage = styled.img`
+  width: 340px;
+  mix-blend-mode: multiply;
+`;
 
-  img {
-    mix-blend-mode: multiply;
-    width: 100px;
-    height: 100px;
-
-    &:nth-child(2n) {
-      margin-left: 100px;
-    }
-  }
+export const BorderImage = styled.img`
+  width: 410px;
+  mix-blend-mode: multiply;
+  position: absolute;
+  margin-top: 10px;
 `;
 
 export const DownloadBtn = styled.div`
