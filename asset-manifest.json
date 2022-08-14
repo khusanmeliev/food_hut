@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/food_hut/static/css/main.e6c13ad2.css",
+    "main.js": "/food_hut/static/js/main.58714680.js",
+    "static/media/pizzaGirl.jpg": "/food_hut/static/media/pizzaGirl.824d0602642cac5629fb.jpg",
+    "static/media/oshpaz.jpg": "/food_hut/static/media/oshpaz.9604ce7f137a7944bfab.jpg",
+    "static/media/8.jpg": "/food_hut/static/media/8.fb3c95e57cd8763dc462.jpg",
+    "static/media/2.jpg": "/food_hut/static/media/2.2edd58db4c0b7e5b82d5.jpg",
+    "static/media/1.jpg": "/food_hut/static/media/1.0a950e6e340a2daab27c.jpg",
+    "static/media/4.jpg": "/food_hut/static/media/4.ee7423ff9156cb5b614f.jpg",
+    "static/media/pizzaGirlBorder.jpg": "/food_hut/static/media/pizzaGirlBorder.1e30e4c23b08a90f2055.jpg",
+    "static/media/7.jpg": "/food_hut/static/media/7.fc73c6764276041728b8.jpg",
+    "static/media/3.jpg": "/food_hut/static/media/3.e041aec71075fee56705.jpg",
+    "static/media/leaf.jpg": "/food_hut/static/media/leaf.9fa3fb747d095d610692.jpg",
+    "static/media/6.jpg": "/food_hut/static/media/6.022c33397b350190ceb9.jpg",
+    "static/media/5.jpg": "/food_hut/static/media/5.3615ec14250b805dd761.jpg",
+    "index.html": "/food_hut/index.html",
+    "main.e6c13ad2.css.map": "/food_hut/static/css/main.e6c13ad2.css.map",
+    "main.58714680.js.map": "/food_hut/static/js/main.58714680.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.58714680.js"
+  ]
+}
