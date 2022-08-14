@@ -3,14 +3,22 @@ import {
   Box,
   Frame,
   Image,
+  OfferButton,
+  OfferDescription,
+  Offers,
   OffersTexts,
+  OfferTitle,
   Pic,
   PicBox,
   Price,
   RateBox,
+  RatesWrapper,
   Row,
   Texts,
-  Txt,
+  TextsColumn,
+  TextsImage,
+  TextsWrapper,
+  Title,
   Wrapper,
 } from "./styles";
 import Heading from "../../components/Heading/Heading";
@@ -19,7 +27,6 @@ import { useContext } from "react";
 import { ThemeContext } from "../../App";
 import { offers, offerTexts } from "../../mock/offers";
 import { FaStar } from "react-icons/fa";
-import ButtonWrapper from "../../components/Button/styles";
 import pizzaGirl from "../../assets/img/home/pizzaGirl.jpg";
 
 const OfferSection = () => {
@@ -27,74 +34,35 @@ const OfferSection = () => {
 
   return (
     <Wrapper>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "20px",
-          width: "80%",
-          background: `${({ theme }) => theme.background}`,
-        }}
-      >
-        <Heading margin="0">
-          Today <span style={{ color: "#F54748" }}>Special</span> Offers
+      <Title>
+        <Heading>
+          Today <span>Special</span> Offers
         </Heading>
-        <Text margin="0">
+        <Text>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s
         </Text>
         <button onClick={toggleTheme}>toggle: {theme}</button>
-      </div>
-      <div
-        style={{
-          marginTop: "100px",
-          display: "flex",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          height: "auto",
-          width: "100%",
-        }}
-      >
+      </Title>
+      <Offers>
         {offers.map((offer) => (
           <Box key={offer.id}>
             <Image src={offer.img} alt="pic" />
             <Price>{offer.price}$</Price>
-            <div
-              style={{
-                width: "100%",
-                height: "10%",
-                marginTop: "15px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexWrap: "wrap",
-              }}
-            >
+            <RatesWrapper>
               <RateBox></RateBox>
               <RateBox></RateBox>
               <RateBox></RateBox>
               <FaStar />
               <Text>({offer.rate})</Text>
-            </div>
-            <Heading align="center" size="sm" style={{ marginTop: "30px" }}>
-              {offer.name}
-            </Heading>
-            <Text align="center" width="80%">
-              {offer.description}
-            </Text>
-            <ButtonWrapper
-              size="16px"
-              style={{
-                marginTop: "320px",
-                position: "absolute",
-              }}
-            >
-              Order Now
-            </ButtonWrapper>
+            </RatesWrapper>
+            <OfferTitle>{offer.name}</OfferTitle>
+            <OfferDescription>{offer.description}</OfferDescription>
+            <OfferButton>Order Now</OfferButton>
           </Box>
         ))}
-      </div>
+      </Offers>
 
       <OffersTexts>
         <Pic>
@@ -107,11 +75,8 @@ const OfferSection = () => {
 
         <Texts>
           <Heading>
-            We are <span style={{ color: "hsla(360, 90%, 62%, 1)" }}>more</span>{" "}
-            than
-            <span style={{ color: "hsla(39, 98%, 68%, 1)" }}>
-              multiple
-            </span>{" "}
+            We are <span>more</span> than
+            <span>multiple</span>
             services
           </Heading>
           <Text>
@@ -119,20 +84,16 @@ const OfferSection = () => {
             in addition to light refreshments such as baked goods or snacks. The
             term comes frome the rench word meaning food
           </Text>
-          <Txt>
+          <TextsWrapper>
             <Row>
               {offerTexts.map((txt) => (
-                <div style={{ display: "flex", gap: "5px" }}>
-                  <img
-                    src={txt.img}
-                    alt="order"
-                    style={{ width: "30px", height: "30px", marginTop: "20px" }}
-                  />
+                <TextsColumn>
+                  <TextsImage src={txt.img} alt="order" />
                   <Text>{txt.text}</Text>
-                </div>
+                </TextsColumn>
               ))}
             </Row>
-          </Txt>
+          </TextsWrapper>
         </Texts>
       </OffersTexts>
     </Wrapper>

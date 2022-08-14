@@ -1,66 +1,69 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Button from "../../Button/Button";
-import Heading from "../../Heading/Heading";
-import { Input } from "../../Input/Input";
-import Text from "../../Text/Text";
-import { Box, FooterWrapper, Lists, Message, SocialMedias } from "./styles";
+import {
+  FooterWrapper,
+  FooterColumnsWrapper,
+  ColumnTitle,
+  CopyrightText,
+  FooterLink,
+  FooterText,
+  IconsWrapper,
+  Input,
+  InputWrapper,
+  LinksColumn,
+  LinksWrapper,
+  MessageWrapper,
+  SocialMedias,
+  StyledHeading,
+} from "./styles";
 
 const Footer = () => {
   return (
     <FooterWrapper>
-      <Box>
+      <FooterColumnsWrapper>
         <SocialMedias>
-          <Heading size="32px" style={{ fontWeight: "600px" }}>
-            Foodhut
-          </Heading>
-          <Text size="18px">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor{" "}
-          </Text>
-          <ul>
-            <li>
-              <FaFacebook />
-            </li>
-            <li>
-              <FaInstagram />
-            </li>
-            <li>
-              <FaTwitter />
-            </li>
-          </ul>
-        </SocialMedias>
-        <Lists>
-          <ul>
-            <li>About Us</li>
-            <li>About Us</li>
-            <li>Service Us</li>
-            <li>Contact</li>
-            <li>Company</li>
-          </ul>
-
-          <ul>
-            <li>Company</li>
-            <li>Partnership</li>
-            <li>Terms of Use</li>
-            <li>Privacy</li>
-            <li>Sitemap</li>
-          </ul>
-        </Lists>
-        <Message>
-          <Heading size="32px" style={{ fontWeight: "600" }}>
-            Get In Touch
-          </Heading>
-          <Text size="18px">
+          <StyledHeading>Foodhut</StyledHeading>
+          <FooterText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor
-          </Text>
-          <ul>
-            <Input placeholder="Email" borderRadius="38px" />
-            <Button backgroundColor>Subscribe</Button>
-          </ul>
-        </Message>
-      </Box>
+          </FooterText>
+          <IconsWrapper>
+            <FaFacebookF />
+            <FaInstagram />
+            <FaTwitter />
+          </IconsWrapper>
+        </SocialMedias>
+        <LinksWrapper>
+          <LinksColumn>
+            <ColumnTitle>About Us</ColumnTitle>
+            <FooterLink>About Us</FooterLink>
+            <FooterLink>Service Us</FooterLink>
+            <FooterLink>Contact</FooterLink>
+            <FooterLink>Company</FooterLink>
+          </LinksColumn>
+
+          <LinksColumn>
+            <ColumnTitle>Company</ColumnTitle>
+            <FooterLink>Partnership</FooterLink>
+            <FooterLink>Terms of Use</FooterLink>
+            <FooterLink>Privacy</FooterLink>
+            <FooterLink>Sitemap</FooterLink>
+          </LinksColumn>
+        </LinksWrapper>
+        <MessageWrapper>
+          <ColumnTitle>Get In Touch</ColumnTitle>
+          <FooterText>
+            Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed
+            do eiusmod tempor
+          </FooterText>
+          <InputWrapper>
+            <Input placeholder="Email" />
+            <Button>Subscribe</Button>
+          </InputWrapper>
+        </MessageWrapper>
+      </FooterColumnsWrapper>
+      <CopyrightText>Copyright © 2022 Foodhut.</CopyrightText>
     </FooterWrapper>
   );
 };

@@ -1,86 +1,101 @@
 import styled from "styled-components";
+import { COLORS } from "../../../assets/styles/colors";
+import Heading from "../../Heading/Heading";
+import Text from "../../Text/Text";
 
 export const FooterWrapper = styled.div`
-  width: 100%;
-  height: 400px;
-  background-color: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-top: 1px solid grey;
+  padding: 100px 100px 40px;
+
+  @media (max-width: 1000px) {
+    padding: 80px 30px 30px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 60px 25px 30px;
+  }
 `;
 
-export const Box = styled.div`
-  width: 80%;
-  height: 90%;
-  background-color: white;
+export const FooterColumnsWrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 400;
+  margin-bottom: 20px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 50px;
+  }
 `;
 
 export const SocialMedias = styled.div`
-  width: 30%;
-  height: 60%;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
   flex-direction: column;
-
-  ul {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    li {
-      list-style-type: none;
-      font-size: 20px;
-      margin: 10px;
-    }
-  }
 `;
 
-export const Lists = styled.div`
-  width: 40%;
-  height: 100%;
+export const StyledHeading = styled(Heading)`
+  font-size: 30px;
+  color: ${COLORS.red};
+  margin-bottom: 25px;
+`;
+
+export const FooterText = styled(Text)`
+  font-size: 16px;
+`;
+
+export const IconsWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-
-  ul {
-    width: 35%;
-    height: 60%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-
-    li {
-      list-style-type: none;
-      margin: 8px;
-
-      :nth-child(1) {
-        font-weight: 600;
-        color: red;
-        font-size: 20px;
-        margin: 10px 10px;
-      }
-    }
+  gap: 20px;
+  padding-top: 20px;
+  path {
+    color: #fdc55e;
   }
 `;
 
-export const Message = styled.div`
-  width: 40%;
-  height: 60%;
+export const LinksWrapper = styled.div`
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
+  gap: 20px;
+`;
 
-  ul {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: flex-start;
-  }
+export const LinksColumn = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+export const ColumnTitle = styled.h1`
+  font-weight: 600;
+  color: ${COLORS.red};
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 25px;
+`;
+
+export const FooterLink = styled.a`
+  list-style-type: none;
+`;
+
+export const MessageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+`;
+
+export const Input = styled.input`
+  border-radius: 38px;
+  background-color: #e6e6e6;
+  border: none;
+  text-indent: 8px;
+  outline: none;
+`;
+
+export const CopyrightText = styled(Text)`
+  opacity: 0.8;
+  font-size: 14px;
+  text-align: center;
 `;

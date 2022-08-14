@@ -1,6 +1,4 @@
 import React from "react";
-import Heading from "../../components/Heading/Heading";
-import { Input } from "../../components/Input/Input";
 import Text from "../../components/Text/Text";
 import { FaHeart, FaPlay } from "react-icons/fa";
 import pizzaGirl from "../../assets/img/home/pizzaGirl.jpg";
@@ -14,6 +12,8 @@ import {
   PlayIcon,
   Rectangle,
   TextsContainer,
+  Input,
+  Title,
 } from "./styles";
 import Button from "../../components/Button/Button";
 
@@ -25,11 +25,10 @@ const MainSection = () => {
           <FaHeart />
           People Trust Us
         </Rectangle>
-
-        <Heading size="lg">
+        <Title>
           We're <span>Serious</span> For <span>Food </span> &
           <span style={{ color: "#FDC55E" }}> Delivery</span>.
-        </Heading>
+        </Title>
 
         <Text>
           Best cooks and best delivery guys all at your service. Hot tasty food

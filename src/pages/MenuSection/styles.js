@@ -2,36 +2,37 @@ import styled from "styled-components";
 import first from "../../assets/img/offer/1.jpg";
 import second from "../../assets/img/offer/2.jpg";
 import third from "../../assets/img/offer/3.jpg";
+import { COLORS } from "../../assets/styles/colors";
 import mobile from "../../assets/styles/size";
-import ButtonWrapper from "../../components/Button/styles";
+import Button from "../../components/Button/Button";
+import Heading from "../../components/Heading/Heading";
 
-export const Wrapper = styled.div`
-  width: 100%;
-  height: auto;
+export const MenuWrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin-top: 80px;
-  background: ${({ theme }) => theme.background};
 `;
 
-export const Buttons = styled.div`
-  width: 70%;
-  height: 150px;
+export const StyledHeading = styled(Heading)`
+  text-align: center;
+  color: ${COLORS.black};
+
+  span {
+    color: ${COLORS.red};
+  }
+`;
+
+export const MenuButtonWrapper = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  padding: 60px 150px 60px;
 
   ${mobile.lg} {
     display: none;
   }
 `;
 
-export const BTN = styled(ButtonWrapper)`
-  width: 98px;
-  height: 44px;
-  color: black;
+export const BTN = styled(Button)`
+  color: ${({ theme }) => theme.button};
   border: 1px solid black;
 
   &:hover {
@@ -40,14 +41,25 @@ export const BTN = styled(ButtonWrapper)`
   }
 `;
 
-export const Box = styled.div`
+export const FoodWrapper = styled.div`
+  padding: 100px 30px 100px;
+  flex-wrap: wrap;
+  display: flex;
+`;
+
+export const RatesWrapper = styled.div`
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
+export const FoodBox = styled.div`
   width: 280px;
-  height: 350px;
-  background: linear-gradient(
-    179.69deg,
-    rgba(255, 255, 255, 0) -0.53%,
-    #f54748 703.75%
-  );
+  height: 340px;
+  background: ${({ theme }) => theme.offerBox};
   color: #fff;
   border-radius: 20px;
   margin: 100px 10px;
@@ -69,32 +81,34 @@ export const Box = styled.div`
   }
 
   ${mobile.lg} {
-    margin: 80px 50px;
-  }
-
-  ${mobile.sm} {
-    width: 500px;
+    width: 90%;
   }
 `;
 
-export const Circle = styled.div`
-  box-sizing: border-box;
+export const FoodBoxTitle = styled(Heading)`
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  ${mobile.lg} {
+    font-size: 30px;
+  }
+`;
+
+export const FoodBoxDescription = styled.p`
+  width: 80%;
+  text-align: center;
+`;
+
+export const FoodBoxButton = styled(Button)`
+  font-size: 16px;
+  margin-top: 320px;
   position: absolute;
-  width: 210px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -350px;
-  border-top-left-radius: 110px;
-  border-top-right-radius: 110px;
-  border: 10px solid gray;
-  border-bottom: 0;
 `;
 
 export const Image = styled.img`
   width: 178px;
   height: 178px;
+  margin-top: -140px;
   mix-blend-mode: multiply;
 `;
 
@@ -109,7 +123,7 @@ export const Price = styled.div`
   border: 3px solid #fff;
   border-radius: 50%;
   margin-left: 90px;
-  margin-top: -205px;
+  margin-top: -180px;
   font-size: 18px;
 `;
 
@@ -120,7 +134,7 @@ export const RateBox = styled.div`
   border-radius: 50%;
   &:nth-child(2n) {
     margin-left: -15px;
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
     background-image: url(${second});
   }
   &:nth-child(3n) {

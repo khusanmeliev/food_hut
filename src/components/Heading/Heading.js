@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import mobile from "../../assets/styles/size";
 
 const headingSize = {
   sm: css`
@@ -15,13 +14,8 @@ const headingSize = {
 
 const Heading = styled.h1`
   ${({ size }) => headingSize[size || "md"] || size};
-  color: ${({ theme }) => theme.heading || theme};
-  text-align: ${({ align }) => align};
-  margin: ${({ margin }) => margin};
-
-  ${mobile.md} {
-    font-size: 40px;
-  }
+  color: ${({ theme }) => theme.heading};
+  margin: 0;
 `;
 
 export default Heading;

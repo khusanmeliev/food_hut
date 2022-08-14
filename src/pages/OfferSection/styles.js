@@ -3,6 +3,7 @@ import first from "../../assets/img/offer/1.jpg";
 import second from "../../assets/img/offer/2.jpg";
 import third from "../../assets/img/offer/3.jpg";
 import mobile from "../../assets/styles/size";
+import ButtonWrapper from "../../components/Button/styles";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -12,6 +13,36 @@ export const Wrapper = styled.div`
   flex-direction: column;
   text-align: center;
   background: ${({ theme }) => theme.background};
+`;
+
+export const Title = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  color: ${({ theme }) => theme.text};
+
+  span {
+    color: #f54748;
+  }
+`;
+
+export const Offers = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+`;
+
+export const RatesWrapper = styled.div`
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const Box = styled.div`
@@ -37,15 +68,30 @@ export const Box = styled.div`
   span {
     color: ${({ theme }) => theme.red};
   }
-  h1 {
-    ${mobile.lg} {
-      font-size: 30px;
-    }
-  }
 
   ${mobile.lg} {
     width: 90%;
   }
+`;
+
+export const OfferTitle = styled.h1`
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  ${mobile.lg} {
+    font-size: 30px;
+  }
+`;
+
+export const OfferDescription = styled.p`
+  width: 80%;
+  font-size: 20px;
+`;
+
+export const OfferButton = styled(ButtonWrapper)`
+  font-size: 16px;
+  margin-top: 320px;
+  position: absolute;
 `;
 
 export const Image = styled.img`
@@ -147,15 +193,40 @@ export const Texts = styled.div`
 
   ${mobile.lg} {
     width: 100%;
+    justify-content: center;
+  }
+
+  span {
+    color: hsla(360, 90%, 62%, 1);
+
+    &:nth-child(2) {
+      color: hsla(39, 98%, 68%, 1);
+    }
+  }
+
+  h1 {
+    ${mobile.md} {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    ${mobile.md} {
+      font-size: 18px;
+      width: 95%;
+    }
   }
 `;
 
-export const Txt = styled.div`
+export const TextsWrapper = styled.div`
   width: 80%;
+  ${mobile.md} {
+    margin-top: 30px;
+  }
 `;
 export const Row = styled.div`
   display: grid;
-  grid-template-columns: 320px 300px;
+  grid-template-columns: 320px 400px;
 
   ${mobile.lg} {
     display: flex;
@@ -167,4 +238,15 @@ export const Row = styled.div`
       font-size: 18px;
     }
   }
+`;
+
+export const TextsColumn = styled.div`
+  display: flex;
+  gap: 5px;
+`;
+
+export const TextsImage = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
 `;

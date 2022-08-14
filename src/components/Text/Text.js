@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const Text = styled.p`
-  width: ${({ width }) => width};
-  color: ${({ theme }) => theme.text || theme};
-  font-size: ${({ size }) => size || "20px"};
-  text-align: ${({ align }) => align};
-  margin: ${({ margin }) => margin};
+  color: ${({ theme }) => theme.text};
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
 `;
 
 export default Text;

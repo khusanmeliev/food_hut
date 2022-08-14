@@ -2,9 +2,9 @@ import styled from "styled-components";
 import mobile from "../../assets/styles/size";
 
 export const Wrapper = styled.div`
-  margin-top: 80px;
-  padding: 20px 80px 80px 80px;
+  padding: 150px 80px 80px 80px;
   display: flex;
+  align-items: center;
   gap: 20px;
   font-family: Arial, Helvetica, sans-serif;
   background: ${({ theme }) => theme.background};
@@ -12,7 +12,11 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 0px;
+    padding: 100px 0px;
+  }
+
+  span {
+    color: hsla(360, 90%, 62%, 1);
   }
 `;
 
@@ -58,6 +62,10 @@ export const Rectangle = styled.div`
     background-color: #f54748;
     color: #fdc55e;
   }
+`;
+
+export const Title = styled.h1`
+  font-size: 40px;
 `;
 
 export const PicContainer = styled.div`
@@ -118,6 +126,7 @@ export const DownloadBtn = styled.div`
   justify-content: flex-start;
   flex-direction: row;
   gap: 15px;
+  margin-top: 20px;
 
   ${mobile.lg} {
     gap: 0px;
@@ -159,4 +168,11 @@ export const PlayIcon = styled.div`
     font-size: 18px;
     cursor: pointer;
   }
+`;
+
+export const Input = styled.input`
+  height: 48px;
+  width: 200px;
+  border-radius: 38px;
+  background-color: #e6e6e6;
 `;

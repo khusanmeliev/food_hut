@@ -13,7 +13,7 @@ export const NavbarWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: ${({ theme }) => theme.background};
-
+  z-index: 1;
   a {
     text-decoration: none;
   }
