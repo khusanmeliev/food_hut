@@ -28,6 +28,7 @@ const AppAdvertSection = () => {
           and most companies are opting for mobile app devlopment for food
           delivery
         </DetailsText>
+
         <Buttons>
           <Button>
             <FaGooglePlay />
