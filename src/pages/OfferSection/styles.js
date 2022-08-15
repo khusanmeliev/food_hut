@@ -2,8 +2,10 @@ import styled from "styled-components";
 import first from "../../assets/img/offer/1.jpg";
 import second from "../../assets/img/offer/2.jpg";
 import third from "../../assets/img/offer/3.jpg";
+import { COLORS } from "../../assets/styles/colors";
 import mobile from "../../assets/styles/size";
-import ButtonWrapper from "../../components/Button/styles";
+import Button from "../../components/Button/Button";
+import Heading from "../../components/Heading/Heading";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -27,28 +29,18 @@ export const Title = styled.div`
   }
 `;
 
-export const Offers = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
+/* Offers Wrapper*/
+
+export const OfferWrapper = styled.div`
+  padding: 100px 30px 100px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  display: flex;
 `;
 
-export const RatesWrapper = styled.div`
-  width: 100%;
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-`;
-
-export const Box = styled.div`
+export const OfferBox = styled.div`
   width: 280px;
-  height: 320px;
-  background: ${({ theme }) => theme.offerBox};
+  height: 340px;
+  background: ${({ theme }) => theme.box};
   color: #fff;
   border-radius: 20px;
   margin: 100px 10px;
@@ -74,30 +66,10 @@ export const Box = styled.div`
   }
 `;
 
-export const OfferTitle = styled.h1`
-  text-align: center;
-  font-size: 30px;
-  margin-top: 30px;
-  ${mobile.lg} {
-    font-size: 30px;
-  }
-`;
-
-export const OfferDescription = styled.p`
-  width: 80%;
-  font-size: 20px;
-`;
-
-export const OfferButton = styled(ButtonWrapper)`
-  font-size: 16px;
-  margin-top: 320px;
-  position: absolute;
-`;
-
 export const Image = styled.img`
   width: 178px;
   height: 178px;
-  margin-top: -140px;
+  margin-top: -150px;
   mix-blend-mode: multiply;
 `;
 
@@ -112,8 +84,17 @@ export const Price = styled.div`
   border: 3px solid #fff;
   border-radius: 50%;
   margin-left: 90px;
-  margin-top: -180px;
+  margin-top: -200px;
   font-size: 18px;
+`;
+
+export const RatesWrapper = styled.div`
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const RateBox = styled.div`
@@ -121,16 +102,41 @@ export const RateBox = styled.div`
   height: 32px;
   background-image: url(${first});
   border-radius: 50%;
+  margin: 10px;
   &:nth-child(2n) {
-    margin-left: -15px;
-    border: 2px solid #ffffff;
+    margin-left: -20px;
+    border: 1px solid #ffffff;
     background-image: url(${second});
   }
   &:nth-child(3n) {
-    margin-left: -15px;
+    margin-left: -20px;
     border: 1px solid #fff;
     background-image: url(${third});
   }
+`;
+
+export const OfferBoxTitle = styled(Heading)`
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+  color: ${COLORS.red};
+
+  ${mobile.lg} {
+    font-size: 30px;
+  }
+`;
+
+export const OfferBoxDescription = styled.p`
+  width: 80%;
+  text-align: center;
+  color: ${({ theme }) => theme.text};
+`;
+
+export const OfferBoxButton = styled(Button)`
+  font-size: 16px;
+  margin-top: 335px;
+  position: absolute;
+  color: ${({ theme }) => theme.button};
 `;
 
 export const OffersTexts = styled.div`
@@ -204,14 +210,11 @@ export const Texts = styled.div`
     }
   }
 
-  h1 {
-    ${mobile.md} {
+  ${mobile.md} {
+    h1 {
       font-size: 30px;
     }
-  }
-
-  p {
-    ${mobile.md} {
+    p {
       font-size: 18px;
       width: 95%;
     }
@@ -220,6 +223,7 @@ export const Texts = styled.div`
 
 export const TextsWrapper = styled.div`
   width: 80%;
+
   ${mobile.md} {
     margin-top: 30px;
   }

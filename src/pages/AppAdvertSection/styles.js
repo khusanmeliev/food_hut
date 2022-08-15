@@ -1,33 +1,48 @@
 import styled from "styled-components";
 import mobile from "../../assets/styles/size";
 import ButtonWrapper from "../../components/Button/styles";
+import Heading from "../../components/Heading/Heading";
+import Text from "../../components/Text/Text";
 
 export const Wrapper = styled.div`
-  width: 100%;
-  height: 500px;
+  padding: 80px 0px 150px;
   background: ${({ theme }) => theme.background};
   display: flex;
-  align-items: flex-start;
   justify-content: flex-end;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+
+export const Details = styled.div`
+  width: 45%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  ${mobile.lg} {
+    width: 90%;
+    align-items: flex-end;
+  }
+`;
+
+export const DetailsHeading = styled.h1`
+  font-size: 40px;
+  color: ${({ theme }) => theme.heading};
 
   span {
     color: ${({ theme }) => theme.red};
   }
 
   ${mobile.lg} {
-    width: 100%;
-    height: 1000px;
-    flex-direction: column;
-    align-items: flex-end;
+    width: 95%;
   }
 `;
 
-export const Details = styled.div`
-  width: 45%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+export const DetailsText = styled.div`
+  font-size: 18px;
+  color: ${({ theme }) => theme.text};
 
   ${mobile.lg} {
     width: 95%;
@@ -35,50 +50,65 @@ export const Details = styled.div`
 `;
 
 export const Buttons = styled.div`
-  width: 90%;
-  height: 20%;
   display: flex;
-  align-items: center;
+  margin-top: 30px;
+
+  ${mobile.lg} {
+    width: 95%;
+    flex-direction: column;
+  }
 `;
 
 export const Button = styled(ButtonWrapper)`
-  height: 40px;
+  height: 45px;
   display: flex;
   align-items: center;
-  justify-content: center;
   border-radius: 5px;
+  background-color: ${({ theme }) => theme.button};
+  margin: 5px;
 
   svg {
-    font-size: 30px;
+    font-size: 35px;
+    color: ${({ theme }) => theme.appDetails};
   }
+
+  ${mobile.lg} {
+    width: 200px;
+    margin: 10px 0px;
+  }
+`;
+
+export const AppDetails = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+`;
+
+export const AppText = styled(Text)`
+  color: ${({ theme }) => theme.appDetails};
+  font-size: 13px;
+`;
+
+export const AppName = styled(Heading)`
+  color: ${({ theme }) => theme.appDetails};
+  font-size: 15px;
 `;
 
 export const ImageBox = styled.div`
   width: 50%;
-  height: 90%;
-  background-color: rebeccapurple;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-
-  ${mobile.lg} {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  align-items: center;
+  justify-content: center;
 
   img {
-    width: 370px;
-    height: 370px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
-    margin-left: -70px;
     position: absolute;
+  }
 
-    ${mobile.lg} {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-    }
+  ${mobile.lg} {
+    display: none;
   }
 `;

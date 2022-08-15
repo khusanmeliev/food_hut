@@ -10,11 +10,12 @@ import Heading from "../../components/Heading/Heading";
 export const MenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: ${({ theme }) => theme.background};
 `;
 
 export const StyledHeading = styled(Heading)`
   text-align: center;
-  color: ${COLORS.black};
+  color: ${({ theme }) => theme.heading};
 
   span {
     color: ${COLORS.red};
@@ -32,6 +33,7 @@ export const MenuButtonWrapper = styled.div`
 `;
 
 export const BTN = styled(Button)`
+  width: 98px;
   color: ${({ theme }) => theme.button};
   border: 1px solid black;
 
@@ -42,7 +44,7 @@ export const BTN = styled(Button)`
 `;
 
 export const FoodWrapper = styled.div`
-  padding: 100px 30px 100px;
+  padding: 100px 30px 10px;
   flex-wrap: wrap;
   display: flex;
 `;
@@ -59,7 +61,7 @@ export const RatesWrapper = styled.div`
 export const FoodBox = styled.div`
   width: 280px;
   height: 340px;
-  background: ${({ theme }) => theme.offerBox};
+  background: ${({ theme }) => theme.box};
   color: #fff;
   border-radius: 20px;
   margin: 100px 10px;
@@ -85,30 +87,10 @@ export const FoodBox = styled.div`
   }
 `;
 
-export const FoodBoxTitle = styled(Heading)`
-  text-align: center;
-  font-size: 30px;
-  margin-top: 30px;
-  ${mobile.lg} {
-    font-size: 30px;
-  }
-`;
-
-export const FoodBoxDescription = styled.p`
-  width: 80%;
-  text-align: center;
-`;
-
-export const FoodBoxButton = styled(Button)`
-  font-size: 16px;
-  margin-top: 320px;
-  position: absolute;
-`;
-
 export const Image = styled.img`
   width: 178px;
   height: 178px;
-  margin-top: -140px;
+  margin-top: -150px;
   mix-blend-mode: multiply;
 `;
 
@@ -123,7 +105,7 @@ export const Price = styled.div`
   border: 3px solid #fff;
   border-radius: 50%;
   margin-left: 90px;
-  margin-top: -180px;
+  margin-top: -200px;
   font-size: 18px;
 `;
 
@@ -132,6 +114,7 @@ export const RateBox = styled.div`
   height: 32px;
   background-image: url(${first});
   border-radius: 50%;
+  margin: 10px;
   &:nth-child(2n) {
     margin-left: -15px;
     border: 2px solid #ffffff;
@@ -142,4 +125,28 @@ export const RateBox = styled.div`
     border: 1px solid #fff;
     background-image: url(${third});
   }
+`;
+
+export const FoodBoxTitle = styled(Heading)`
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+  color: ${COLORS.red};
+
+  ${mobile.lg} {
+    font-size: 30px;
+  }
+`;
+
+export const FoodBoxDescription = styled.p`
+  width: 80%;
+  text-align: center;
+  color: ${({ theme }) => theme.text};
+`;
+
+export const FoodBoxButton = styled(Button)`
+  font-size: 16px;
+  margin-top: 320px;
+  position: absolute;
+  color: ${({ theme }) => theme.button};
 `;

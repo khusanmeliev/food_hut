@@ -1,13 +1,13 @@
 import React from "react";
 import {
-  Box,
   Frame,
   Image,
-  OfferButton,
-  OfferDescription,
-  Offers,
+  OfferBox,
+  OfferBoxButton,
+  OfferBoxDescription,
+  OfferBoxTitle,
   OffersTexts,
-  OfferTitle,
+  OfferWrapper,
   Pic,
   PicBox,
   Price,
@@ -45,11 +45,12 @@ const OfferSection = () => {
         </Text>
         <button onClick={toggleTheme}>toggle: {theme}</button>
       </Title>
-      <Offers>
+      <OfferWrapper>
         {offers.map((offer) => (
-          <Box key={offer.id}>
-            <Image src={offer.img} alt="pic" />
+          <OfferBox key={offer.id}>
+            <Image src={offer.img} />
             <Price>{offer.price}$</Price>
+
             <RatesWrapper>
               <RateBox></RateBox>
               <RateBox></RateBox>
@@ -57,12 +58,13 @@ const OfferSection = () => {
               <FaStar />
               <Text>({offer.rate})</Text>
             </RatesWrapper>
-            <OfferTitle>{offer.name}</OfferTitle>
-            <OfferDescription>{offer.description}</OfferDescription>
-            <OfferButton>Order Now</OfferButton>
-          </Box>
+
+            <OfferBoxTitle>{offer.name}</OfferBoxTitle>
+            <OfferBoxDescription>{offer.description}</OfferBoxDescription>
+            <OfferBoxButton>Order Now</OfferBoxButton>
+          </OfferBox>
         ))}
-      </Offers>
+      </OfferWrapper>
 
       <OffersTexts>
         <Pic>

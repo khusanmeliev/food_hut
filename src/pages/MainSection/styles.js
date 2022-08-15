@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   gap: 20px;
   font-family: Arial, Helvetica, sans-serif;
   background: ${({ theme }) => theme.background};
-  ${mobile.md} {
+  ${mobile.lg} {
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -31,6 +31,7 @@ export const TextsContainer = styled.div`
     width: 90%;
     height: 100%;
     gap: 0px;
+    box-sizing: border-box;
   }
 
   input {
@@ -49,9 +50,13 @@ export const TextsContainer = styled.div`
 `;
 
 export const Rectangle = styled.div`
-  width: 150px;
-  height: 28px;
-  background: #f54748;
+  width: 190px;
+  height: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 71, 72, 0.06) 0%,
+    rgba(245, 71, 72, 0) 100%
+  );
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -59,14 +64,35 @@ export const Rectangle = styled.div`
   gap: 10px;
 
   svg {
+    width: 25px;
+    height: 25px;
     background-color: #f54748;
     color: #fdc55e;
+    border-radius: 50%;
   }
 `;
 
 export const Title = styled.h1`
-  font-size: 40px;
+  font-size: 45px;
+  letter-spacing: 1px;
   color: ${({ theme }) => theme.text};
+
+  ${mobile.lg}{
+    font-size: 35px;
+    letter-spacing: 0px;
+  }
+`;
+
+export const OrangeImage = styled.img`
+  mix-blend-mode: multiply;
+  position: absolute;
+  margin-left: 410px;
+  margin-top: -110px;
+
+  ${mobile.sm} {
+    margin-left: 225px;
+    margin-top: -90px;
+  }
 `;
 
 export const PictureContainer = styled.div`
@@ -82,6 +108,14 @@ export const PictureContainer = styled.div`
     display: none;
   }
 `;
+
+export const FireImage = styled.img`
+  mix-blend-mode: multiply;
+  position: absolute;
+  margin-left: 0px;
+  margin-top: -230px;
+`;
+
 export const LeafImage = styled.img`
   width: 100px;
   mix-blend-mode: multiply;

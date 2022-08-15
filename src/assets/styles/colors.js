@@ -13,10 +13,10 @@ export const lightTheme = {
   text: COLORS.darkGrey,
   heading: COLORS.darkGrey,
   button: COLORS.black,
+  appDetails: COLORS.white,
   playIconBoxShadow:
     " rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
-  offerBox:
-    "linear-gradient(179.69deg, rgba(255, 255, 255, 0) -31.53%, #F54748 303.75%)",
+  box: "linear-gradient(179.69deg, rgba(255, 255, 255, 0) -31.53%, #F54748 303.75%)",
 };
 
 export const darkTheme = {
@@ -25,7 +25,7 @@ export const darkTheme = {
   text: COLORS.white,
   heading: COLORS.white,
   button: COLORS.white,
+  appDetails: COLORS.black,
   playIconBoxShadow: "0px 15px 30px rgba(223, 105, 81, 0.3)",
-  offerBox:
-    "linear-gradient(179.69deg, rgba(255, 255, 255, 0) -31.53%, #F54748 303.75%)",
+  box: "linear-gradient(179.69deg, rgba(255, 255, 255, 0) -31.53%, #F54748 303.75%)",
 };

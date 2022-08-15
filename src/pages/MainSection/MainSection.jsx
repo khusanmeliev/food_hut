@@ -4,6 +4,8 @@ import { FaHeart, FaPlay } from "react-icons/fa";
 import leaf from "../../assets/img/home/leaf.jpg";
 import pizzaGirl from "../../assets/img/home/pizzaGirl.jpg";
 import pizzaGirlBorder from "../../assets/img/home/pizzaGirlBorder.jpg";
+import orange from "../../assets/img/home/orange.jpg";
+import fire from '../../assets/img/home/fire.jpg'
 
 import {
   Wrapper,
@@ -17,6 +19,8 @@ import {
   PizzaImage,
   BorderImage,
   LeafImage,
+  OrangeImage,
+  FireImage,
 } from "./styles";
 import Button from "../../components/Button/Button";
 
@@ -28,8 +32,10 @@ const MainSection = () => {
           <FaHeart />
           People Trust Us
         </Rectangle>
+        <OrangeImage src={orange} alt="orange" />
         <Title>
-          We're <span>Serious</span> For <span>Food </span> &
+          We're <span>Serious</span> For 
+          <span> Food </span> &
           <span style={{ color: "#FDC55E" }}> Delivery</span>.
         </Title>
 
@@ -50,6 +56,7 @@ const MainSection = () => {
       </TextsContainer>
 
       <PictureContainer>
+        <FireImage src={fire} alt='fire'/>
         <LeafImage src={leaf} alt="left" />
         <PizzaImage src={pizzaGirl} alt="pizzaGirl" />
         <BorderImage src={pizzaGirlBorder} alt="border of pizza girl" />

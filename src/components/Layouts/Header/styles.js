@@ -35,9 +35,7 @@ export const NavbarWrapper = styled.div`
 `;
 
 export const Logo = styled.h1`
-  width: fit-content;
   display: flex;
-  flex-direction: column;
   padding: 0px 60px;
 
   ${mobile.lg} {
