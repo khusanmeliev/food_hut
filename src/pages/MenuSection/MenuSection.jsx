@@ -50,7 +50,6 @@ const MenuSection = () => {
               <FaStar />
               <Text>({food.rate})</Text>
             </RatesWrapper>
-
             <FoodBoxTitle>{food.name}</FoodBoxTitle>
             <FoodBoxDescription>{food.description}</FoodBoxDescription>
             <FoodBoxButton>Order Now</FoodBoxButton>
