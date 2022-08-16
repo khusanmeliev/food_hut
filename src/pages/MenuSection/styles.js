@@ -52,7 +52,7 @@ export const BTN = styled(Button)`
 `;
 
 export const FoodWrapper = styled.div`
-  padding: 100px 30px 10px;
+  padding: 100px 70px 10px;
   flex-wrap: wrap;
   display: flex;
 `;
