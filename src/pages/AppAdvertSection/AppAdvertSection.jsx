@@ -15,8 +15,6 @@ import {
   ImageBox,
   ImageChef,
   ImageCircle,
-  ImageOfOwpaz,
-  ImageOfRoom,
   ImageRoom,
   Wrapper,
 } from "./styles";
