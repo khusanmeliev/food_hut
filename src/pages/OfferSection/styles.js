@@ -6,7 +6,6 @@ import { COLORS } from "../../assets/styles/colors";
 import mobile from "../../assets/styles/size";
 import Button from "../../components/Button/Button";
 import Heading from "../../components/Heading/Heading";
-import Text from "../../components/Text/Text";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -16,6 +15,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   text-align: center;
   background: ${({ theme }) => theme.background};
+  font-family: Arial, Helvetica, sans-serif;
+  ${mobile.lg} {
+    padding: 30px 0px 0px 0px;
+  }
 `;
 
 export const Title = styled.div`
@@ -36,9 +39,19 @@ export const Title = styled.div`
 /* Offers Wrapper*/
 
 export const OfferWrapper = styled.div`
-  padding: 100px 30px 100px;
+  padding: 100px 30px 10px;
   flex-wrap: wrap;
   display: flex;
+  font-family: sans-serif;
+`;
+
+export const RatesWrapper = styled.div`
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const OfferBox = styled.div`
@@ -71,10 +84,9 @@ export const OfferBox = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 178px;
-  height: 178px;
+  width: 180px;
+  height: 180px;
   margin-top: -150px;
-  mix-blend-mode: multiply;
 `;
 
 export const Price = styled.div`
@@ -87,17 +99,9 @@ export const Price = styled.div`
   position: absolute;
   border: 3px solid #fff;
   border-radius: 50%;
-  margin: -200px 90px;
+  margin-left: 90px;
+  margin-top: -200px;
   font-size: 18px;
-`;
-
-export const RatesWrapper = styled.div`
-  width: 100%;
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
 `;
 
 export const RateBox = styled.div`
@@ -107,12 +111,12 @@ export const RateBox = styled.div`
   border-radius: 50%;
   margin: 10px;
   &:nth-child(2n) {
-    margin-left: -20px;
-    border: 1px solid #ffffff;
+    margin-left: -15px;
+    border: 2px solid #ffffff;
     background-image: url(${secondPic});
   }
   &:nth-child(3n) {
-    margin-left: -20px;
+    margin-left: -15px;
     border: 1px solid #fff;
     background-image: url(${thirdPic});
   }
@@ -137,9 +141,9 @@ export const OfferBoxDescription = styled.p`
 
 export const OfferBoxButton = styled(Button)`
   font-size: 16px;
-  margin-top: 335px;
+  margin-top: 320px;
   position: absolute;
-  color: ${({ theme }) => theme.button};
+  background-color: ${({ theme }) => theme.button};
 `;
 
 export const OffersTexts = styled.div`

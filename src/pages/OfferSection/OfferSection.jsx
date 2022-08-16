@@ -21,8 +21,6 @@ import {
 } from "./styles";
 import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
-import { useContext } from "react";
-import { ThemeContext } from "../../App";
 import { offers, offerTexts } from "../../mock/offers";
 import { FaStar } from "react-icons/fa";
 import chef from "../../assets/img/offer/chef.png";

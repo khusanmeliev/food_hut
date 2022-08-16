@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { COLORS } from "../../../assets/styles/colors";
 import mobile from "../../../assets/styles/size";
 import Button from "../../Button/Button";
 
@@ -15,11 +14,20 @@ export const NavbarWrapper = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.background};
   z-index: 1;
+
+  ${mobile.lg} {
+    padding: 0px 30px;
+  }
 `;
 
 export const Logo = styled.h1`
   display: flex;
   padding: 0px 60px;
+  flex-direction: column;
+
+  p{
+    font-size: 25px;
+  }
 
   ${mobile.lg} {
     padding: 0px;
@@ -27,19 +35,15 @@ export const Logo = styled.h1`
 `;
 
 export const LogoImage = styled.img`
-  mix-blend-mode: multiply;
-  background-color: white;
-  p {
-    color: white;
-  }
+  width: 50px;
 `;
 
 export const ListsWrapper = styled.div`
   display: flex;
 `;
 
-export const NavbarButton = styled.span`
-  color: ${({ theme }) => theme.menu};
+export const NavbarMenu = styled.span`
+  color: ${({ theme }) => theme.navbarMenu};
   font-size: 30px;
   display: none;
   ${mobile.sm} {
@@ -83,9 +87,8 @@ export const Link = styled.li`
   }
 
   ${mobile.sm} {
-    font-family: "Roboto Slab", serif;
     font-size: 18px;
-    color: ${({ theme }) => theme.text};
+    color: white;
   }
 `;
 
@@ -111,4 +114,13 @@ export const ToggleButton = styled.button`
   margin: -10px;
   color: ${({ theme }) => theme.button};
   background-color: inherit;
+  cursor: pointer;
+  ${mobile.lg} {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #f54748;
+    font-size: 23px;
+  }
 `;

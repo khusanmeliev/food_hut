@@ -51,7 +51,7 @@ export const TextsContainer = styled.div`
 
 export const Rectangle = styled.div`
   width: 190px;
-  height: 30px;
+  height: 40px;
   background: linear-gradient(
     180deg,
     rgba(245, 71, 72, 0.06) 0%,
@@ -62,6 +62,7 @@ export const Rectangle = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+  color: ${({ theme }) => theme.text};
 
   svg {
     width: 25px;
@@ -96,7 +97,6 @@ export const OrangeImage = styled.img`
 export const PictureContainer = styled.div`
   width: 60%;
   height: 100%;
-  background-color: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,29 +195,4 @@ export const Input = styled.input`
   width: 200px;
   border-radius: 38px;
   background-color: #e6e6e6;
-`;
-
-export const FoodImage = styled.img`
-  mix-blend-mode: multiply;
-  position: absolute;
-  width: 130px;
-  margin: 70px -190px;
-`;
-export const FoodImagesecond = styled.img`
-  mix-blend-mode: multiply;
-  position: absolute;
-  width: 130px;
-  margin: 180px -100px;
-`;
-export const FoodImagethird = styled.img`
-  mix-blend-mode: multiply;
-  position: absolute;
-  width: 130px;
-  margin: 70px -190px;
-`;
-export const FoodImagefourth = styled.img`
-  mix-blend-mode: multiply;
-  position: absolute;
-  width: 130px;
-  margin: 70px -190px;
 `;

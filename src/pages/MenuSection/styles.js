@@ -11,6 +11,7 @@ export const MenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.background};
+  font-family: Arial, Helvetica, sans-serif;
 `;
 
 export const StyledHeading = styled(Heading)`
@@ -154,5 +155,5 @@ export const FoodBoxButton = styled(Button)`
   font-size: 16px;
   margin-top: 320px;
   position: absolute;
-  color: ${({ theme }) => theme.button};
+  background-color: ${({ theme }) => theme.button};
 `;

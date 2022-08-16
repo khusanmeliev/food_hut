@@ -1,6 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
 import {
-  Button,
   DownloadButton,
   HeaderLink,
   Link,
@@ -8,14 +7,15 @@ import {
   Logo,
   LogoImage,
   Menu,
-  NavbarButton,
+  NavbarMenu,
   NavbarWrapper,
   ToggleButton,
 } from "./styles";
 import { AiOutlineMenu } from "react-icons/ai";
 import logo from "../../../assets/img/logo.png";
-import { FaMoon } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
 import { ThemeContext } from "../../../App";
+import Text from "../../Text/Text";
 
 const Header = () => {
   const navbar = useRef(null);
@@ -31,11 +31,12 @@ const Header = () => {
     <NavbarWrapper ref={navbar}>
       <Logo>
         <LogoImage src={logo} alt="logo" />
+        <Text>Food Hut</Text>
       </Logo>
       <ListsWrapper>
-        <NavbarButton onClick={() => setNavbarOpen(!navbarOpen)}>
+        <NavbarMenu onClick={() => setNavbarOpen(!navbarOpen)}>
           <AiOutlineMenu />
-        </NavbarButton>
+        </NavbarMenu>
         <Menu navbarOpen={navbarOpen}>
           <HeaderLink href="#offers" onClick={handleCloseNavbar}>
             <Link>Today Special Offers</Link>
@@ -53,7 +54,11 @@ const Header = () => {
             <DownloadButton>Download App</DownloadButton>
           </HeaderLink>
           <ToggleButton onClick={toggleTheme}>
-            <FaMoon />
+            {theme === "light" ? (
+              <FaSun style={{ color: "yellow" }} />
+            ) : (
+              <FaMoon />
+            )}
           </ToggleButton>
         </Menu>
       </ListsWrapper>
