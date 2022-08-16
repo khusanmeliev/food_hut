@@ -25,7 +25,7 @@ export const Logo = styled.h1`
   padding: 0px 60px;
   flex-direction: column;
 
-  p{
+  p {
     font-size: 25px;
   }
 
