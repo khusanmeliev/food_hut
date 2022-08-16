@@ -16,6 +16,7 @@ import {
   MessageWrapper,
   SocialMedias,
   StyledHeading,
+  ColumnText,
 } from "./styles";
 
 const Footer = () => {
@@ -53,10 +54,10 @@ const Footer = () => {
         </LinksWrapper>
         <MessageWrapper>
           <ColumnTitle>Get In Touch</ColumnTitle>
-          <FooterText>
+          <ColumnText>
             Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed
             do eiusmod tempor
-          </FooterText>
+          </ColumnText>
           <InputWrapper>
             <Input placeholder="Email" />
             <Button>Subscribe</Button>

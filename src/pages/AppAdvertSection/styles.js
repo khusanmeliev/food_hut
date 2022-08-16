@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { COLORS } from "../../assets/styles/colors";
 import mobile from "../../assets/styles/size";
 import ButtonWrapper from "../../components/Button/styles";
 import Heading from "../../components/Heading/Heading";
@@ -10,7 +11,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
   }
 `;
@@ -32,7 +33,7 @@ export const DetailsHeading = styled.h1`
   color: ${({ theme }) => theme.heading};
 
   span {
-    color: ${({ theme }) => theme.red};
+    color: ${COLORS.red};
   }
 
   ${mobile.lg} {
@@ -101,14 +102,32 @@ export const ImageBox = styled.div`
   align-items: center;
   justify-content: center;
 
-  img {
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    position: absolute;
-  }
-
   ${mobile.lg} {
     display: none;
   }
+`;
+
+export const ImageRoom = styled.img`
+  width: 400px;
+  height: 400px;
+`;
+
+export const ImageChef = styled.img`
+  width: 400px;
+  height: 480px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -40px;
+`;
+
+export const ImageCircle = styled.img`
+  width: 500px;
+  position: absolute;
+  margin-top: 10px;
+`;
+
+export const ImageBorderImg = styled.img`
+  width: 100px;
+  height: 100px;
+  mix-blend-mode: multiply;
 `;

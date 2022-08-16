@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import first from "../../assets/img/offer/1.jpg";
-import second from "../../assets/img/offer/2.jpg";
-import third from "../../assets/img/offer/3.jpg";
+import first from "../../assets/img/avatars/1.jpg";
+import second from "../../assets/img/avatars/2.jpg";
+import third from "../../assets/img/avatars/3.jpg";
 import { COLORS } from "../../assets/styles/colors";
 import mobile from "../../assets/styles/size";
 import Button from "../../components/Button/Button";
@@ -14,11 +14,16 @@ export const MenuWrapper = styled.div`
 `;
 
 export const StyledHeading = styled(Heading)`
+  margin-top: 30px;
   text-align: center;
   color: ${({ theme }) => theme.heading};
 
   span {
     color: ${COLORS.red};
+
+    :nth-child(2) {
+      color: #fdc55e;
+    }
   }
 `;
 
@@ -36,10 +41,12 @@ export const BTN = styled(Button)`
   width: 98px;
   color: ${({ theme }) => theme.button};
   border: 1px solid black;
+  background-color: inherit;
+  border: 2px solid ${({ theme }) => theme.button};
 
   &:hover {
-    background-color: ${({ theme }) => theme.red};
-    color: white;
+    background-color: ${COLORS.red};
+    border: none;
   }
 `;
 
@@ -88,10 +95,9 @@ export const FoodBox = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 178px;
-  height: 178px;
+  width: 180px;
+  height: 180px;
   margin-top: -150px;
-  mix-blend-mode: multiply;
 `;
 
 export const Price = styled.div`

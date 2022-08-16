@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { COLORS } from "../../../assets/styles/colors";
+import mobile from "../../../assets/styles/size";
 import Heading from "../../Heading/Heading";
 import Text from "../../Text/Text";
 
 export const FooterWrapper = styled.div`
-  border-top: 1px solid grey;
   padding: 100px 100px 40px;
+  background: ${({ theme }) => theme.background};
 
   @media (max-width: 1000px) {
     padding: 80px 30px 30px;
@@ -27,8 +28,13 @@ export const FooterColumnsWrapper = styled.div`
 `;
 
 export const SocialMedias = styled.div`
+  width: 40%;
   display: flex;
   flex-direction: column;
+
+  ${mobile.lg} {
+    width: 100%;
+  }
 `;
 
 export const StyledHeading = styled(Heading)`
@@ -38,7 +44,12 @@ export const StyledHeading = styled(Heading)`
 `;
 
 export const FooterText = styled(Text)`
+  width: 60%;
   font-size: 16px;
+
+  ${mobile.lg} {
+    width: 100%;
+  }
 `;
 
 export const IconsWrapper = styled.div`
@@ -52,15 +63,23 @@ export const IconsWrapper = styled.div`
 `;
 
 export const LinksWrapper = styled.div`
+  width: 30%;
   display: flex;
-  gap: 20px;
+  gap: 30px;
+
+  ${mobile.lg} {
+    width: 100%;
+  }
 `;
 
 export const LinksColumn = styled.div`
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
   gap: 10px;
+
+  :nth-child(2) {
+    margin: 0px 20px;
+  }
 `;
 
 export const ColumnTitle = styled.h1`
@@ -71,13 +90,23 @@ export const ColumnTitle = styled.h1`
   margin-bottom: 25px;
 `;
 
+export const ColumnText = styled(Text)`
+  font-size: 16px;
+`;
+
 export const FooterLink = styled.a`
   list-style-type: none;
+  color: ${({ theme }) => theme.text};
 `;
 
 export const MessageWrapper = styled.div`
+  width: 30%;
   display: flex;
   flex-direction: column;
+
+  ${mobile.lg} {
+    width: 100%;
+  }
 `;
 
 export const InputWrapper = styled.div`

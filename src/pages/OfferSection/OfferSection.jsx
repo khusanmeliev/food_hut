@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Frame,
   Image,
   OfferBox,
   OfferBoxButton,
@@ -8,15 +7,14 @@ import {
   OfferBoxTitle,
   OffersTexts,
   OfferWrapper,
-  Pic,
-  PicBox,
+  Picture,
+  PizzaImage,
   Price,
   RateBox,
   RatesWrapper,
   Row,
-  Texts,
-  TextsColumn,
-  TextsImage,
+  RowImage,
+  RowsColumn,
   TextsWrapper,
   Title,
   Wrapper,
@@ -27,13 +25,11 @@ import { useContext } from "react";
 import { ThemeContext } from "../../App";
 import { offers, offerTexts } from "../../mock/offers";
 import { FaStar } from "react-icons/fa";
-import pizzaGirl from "../../assets/img/home/pizzaGirl.jpg";
+import chef from "../../assets/img/offer/chef.png";
 
 const OfferSection = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-
   return (
-    <Wrapper>
+    <Wrapper id="offers">
       <Title>
         <Heading>
           Today <span>Special</span> Offers
@@ -43,7 +39,6 @@ const OfferSection = () => {
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s
         </Text>
-        <button onClick={toggleTheme}>toggle: {theme}</button>
       </Title>
       <OfferWrapper>
         {offers.map((offer) => (
@@ -66,37 +61,30 @@ const OfferSection = () => {
         ))}
       </OfferWrapper>
 
-      <OffersTexts>
-        <Pic>
-          <Frame>
-            <PicBox></PicBox>
-            <img src={pizzaGirl} alt="pizzaGirl" />
-            <Text>Online order</Text>
-          </Frame>
-        </Pic>
+      <OffersTexts id="whyfoodhut">
+        <Picture>
+          <PizzaImage src={chef} alt="pizzaGirl" />
+        </Picture>
 
-        <Texts>
+        <TextsWrapper>
           <Heading>
-            We are <span>more</span> than
-            <span>multiple</span>
-            services
+            We are <span> more</span> than
+            <span> multiple</span> services
           </Heading>
           <Text>
             This is a type of resturent which typically serves food and drink,
             in addition to light refreshments such as baked goods or snacks. The
             term comes frome the rench word meaning food
           </Text>
-          <TextsWrapper>
-            <Row>
-              {offerTexts.map((txt) => (
-                <TextsColumn>
-                  <TextsImage src={txt.img} alt="order" />
-                  <Text>{txt.text}</Text>
-                </TextsColumn>
-              ))}
-            </Row>
-          </TextsWrapper>
-        </Texts>
+          <Row>
+            {offerTexts.map((txt) => (
+              <RowsColumn>
+                <RowImage src={txt.img} alt="order" />
+                <Text>{txt.text}</Text>
+              </RowsColumn>
+            ))}
+          </Row>
+        </TextsWrapper>
       </OffersTexts>
     </Wrapper>
   );

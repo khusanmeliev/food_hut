@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import first from "../../assets/img/offer/1.jpg";
-import second from "../../assets/img/offer/2.jpg";
-import third from "../../assets/img/offer/3.jpg";
+import firstPic from "../../assets/img/avatars/1.jpg";
+import secondPic from "../../assets/img/avatars/2.jpg";
+import thirdPic from "../../assets/img/avatars/3.jpg";
 import { COLORS } from "../../assets/styles/colors";
 import mobile from "../../assets/styles/size";
 import Button from "../../components/Button/Button";
 import Heading from "../../components/Heading/Heading";
+import Text from "../../components/Text/Text";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -26,6 +27,9 @@ export const Title = styled.div`
 
   span {
     color: #f54748;
+  }
+  ${mobile.lg} {
+    width: 80%;
   }
 `;
 
@@ -83,8 +87,7 @@ export const Price = styled.div`
   position: absolute;
   border: 3px solid #fff;
   border-radius: 50%;
-  margin-left: 90px;
-  margin-top: -200px;
+  margin: -200px 90px;
   font-size: 18px;
 `;
 
@@ -100,18 +103,18 @@ export const RatesWrapper = styled.div`
 export const RateBox = styled.div`
   width: 32px;
   height: 32px;
-  background-image: url(${first});
+  background-image: url(${firstPic});
   border-radius: 50%;
   margin: 10px;
   &:nth-child(2n) {
     margin-left: -20px;
     border: 1px solid #ffffff;
-    background-image: url(${second});
+    background-image: url(${secondPic});
   }
   &:nth-child(3n) {
     margin-left: -20px;
     border: 1px solid #fff;
-    background-image: url(${third});
+    background-image: url(${thirdPic});
   }
 `;
 
@@ -146,60 +149,32 @@ export const OffersTexts = styled.div`
   display: flex;
 `;
 
-export const Pic = styled.div`
+export const Picture = styled.div`
   width: 40%;
+  display: flex;
+  align-items: flex-start;
 
   ${mobile.lg} {
     display: none;
   }
 `;
-export const Frame = styled.div`
-  width: 390px;
-  height: 390px;
-  background: linear-gradient(rgba(245, 71, 72, 0), rgba(253, 197, 94, 1));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 130px;
 
-  img {
-    width: 280px;
-    position: absolute;
-    height: 390px;
-    margin-top: -45px;
-    mix-blend-mode: multiply;
-  }
+export const PizzaImage = styled.img`
+  width: 600px;
+  margin-top: -180px;
 `;
 
-export const PicBox = styled.div`
-  width: 350px;
-  height: 350px;
-  background-color: #f54748;
-  border-radius: 50%;
-  display: flex;
-  gap: 20px;
-
-  img {
-    mix-blend-mode: multiply;
-    width: 100px;
-    height: 100px;
-
-    &:nth-child(2n) {
-      margin-left: 100px;
-    }
-  }
-`;
-
-export const Texts = styled.div`
+export const TextsWrapper = styled.div`
   width: 60%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 30px;
 
   ${mobile.lg} {
     width: 100%;
-    justify-content: center;
+    align-items: start;
+    justify-content: flex-start;
   }
 
   span {
@@ -211,26 +186,25 @@ export const Texts = styled.div`
   }
 
   ${mobile.md} {
+    padding: 0px 20px;
+
     h1 {
-      font-size: 30px;
+      font-size: 35px;
+      text-align: left;
     }
     p {
       font-size: 18px;
       width: 95%;
+      text-align: left;
+      margin-top: 15px;
     }
   }
 `;
 
-export const TextsWrapper = styled.div`
-  width: 80%;
-
-  ${mobile.md} {
-    margin-top: 30px;
-  }
-`;
 export const Row = styled.div`
+  width: 80%;
   display: grid;
-  grid-template-columns: 320px 400px;
+  grid-template-columns: 320px 200px;
 
   ${mobile.lg} {
     display: flex;
@@ -244,13 +218,16 @@ export const Row = styled.div`
   }
 `;
 
-export const TextsColumn = styled.div`
+export const RowsColumn = styled.div`
   display: flex;
-  gap: 5px;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+  /* margin: 10px 0px; */
 `;
 
-export const TextsImage = styled.img`
+export const RowImage = styled.img`
   width: 30px;
   height: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
 `;

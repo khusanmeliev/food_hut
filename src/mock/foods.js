@@ -1,11 +1,11 @@
-import firstPic from "../assets/img/foods/1.jpg";
-import secondPic from "../assets/img/foods/2.jpg";
-import thirdPic from "../assets/img/foods/3.jpg";
-import fourthPic from "../assets/img/foods/4.jpg";
-import fifthPic from "../assets/img/foods/5.jpg";
-import sixthPic from "../assets/img/foods/6.jpg";
-import seventhPic from "../assets/img/foods/7.jpg";
-import eightthPic from "../assets/img/foods/8.jpg";
+import firstPic from "../assets/img/foods/1.png";
+import secondPic from "../assets/img/foods/2.png";
+import thirdPic from "../assets/img/foods/3.png";
+import fourthPic from "../assets/img/foods/4.png";
+import fifthPic from "../assets/img/foods/5.png";
+import sixthPic from "../assets/img/foods/6.png";
+import seventhPic from "../assets/img/foods/7.png";
+import eightthPic from "../assets/img/foods/8.png";
 
 export const foods = [
   {

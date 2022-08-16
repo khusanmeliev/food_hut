@@ -17,6 +17,7 @@ export const lightTheme = {
   playIconBoxShadow:
     " rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
   box: "linear-gradient(179.69deg, rgba(255, 255, 255, 0) -31.53%, #F54748 303.75%)",
+  menu: "#191919",
 };
 
 export const darkTheme = {
@@ -28,4 +29,5 @@ export const darkTheme = {
   appDetails: COLORS.black,
   playIconBoxShadow: "0px 15px 30px rgba(223, 105, 81, 0.3)",
   box: "linear-gradient(179.69deg, rgba(255, 255, 255, 0) -31.53%, #F54748 303.75%)",
+  menu: "#fff",
 };

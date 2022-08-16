@@ -1,11 +1,10 @@
-import firstPic from "../assets/img/foods/1.jpg";
-import secondPic from "../assets/img/foods/2.jpg";
-import thirdPic from "../assets/img/foods/3.jpg";
-import fourthPic from "../assets/img/foods/4.jpg";
+import firstPic from "../assets/img/foods/1.png";
+import secondPic from "../assets/img/foods/2.png";
+import thirdPic from "../assets/img/foods/3.png";
+import fourthPic from "../assets/img/foods/4.png";
 import order1 from "../assets/img/offer/order1.jpg";
 import order2 from "../assets/img/offer/order2.jpg";
 import order3 from "../assets/img/offer/order3.jpg";
-import { OffersTexts } from "../pages/OfferSection/styles";
 
 export const offers = [
   {

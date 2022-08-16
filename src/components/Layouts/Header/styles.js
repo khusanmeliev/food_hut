@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { COLORS } from "../../../assets/styles/colors";
 import mobile from "../../../assets/styles/size";
+import Button from "../../Button/Button";
 
 export const NavbarWrapper = styled.div`
-  position: fixed;
   width: 100%;
   height: 80px;
   transition: 0.5s;
@@ -14,24 +15,6 @@ export const NavbarWrapper = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.background};
   z-index: 1;
-  a {
-    text-decoration: none;
-  }
-  input {
-    display: none;
-  }
-  label {
-    display: none;
-    font-size: 40px;
-  }
-  ${mobile.sm} {
-    input:checked ~ .menu {
-      display: none;
-    }
-    label {
-      display: block;
-    }
-  }
 `;
 
 export const Logo = styled.h1`
@@ -44,34 +27,23 @@ export const Logo = styled.h1`
 `;
 
 export const LogoImage = styled.img`
-  width: 130px;
   mix-blend-mode: multiply;
-`;
-
-export const List = styled.li`
-  padding: 5px 14px;
-  display: inline;
-  cursor: pointer;
-  color: ${({ theme }) => theme.text};
-  &:hover {
-    transition: 0.3s ease;
-    ${mobile} {
-      display: block;
-      transition: 0.3s ease;
-    }
-  }
-  ${mobile.sm} {
-    font-family: "Roboto Slab", serif;
-    font-size: 18px;
+  background-color: white;
+  p {
+    color: white;
   }
 `;
 
-export const MenuButton = styled.div`
+export const ListsWrapper = styled.div`
+  display: flex;
+`;
+
+export const NavbarButton = styled.span`
+  color: ${({ theme }) => theme.menu};
+  font-size: 30px;
   display: none;
   ${mobile.sm} {
     display: block;
-    font-size: 40px;
-    cursor: pointer;
   }
 `;
 
@@ -82,21 +54,61 @@ export const Menu = styled.div`
   ${mobile.sm} {
     display: ${({ navbarOpen }) => (navbarOpen ? `flex` : "none")};
     flex-direction: column;
-    background-color: #191919;
+    background-color: ${({ theme }) => theme.menu};
     text-align: center;
     width: 100%;
     height: 94vh;
     position: absolute;
     right: 0;
     left: 0;
+    margin-top: 60px;
   }
 `;
 
-export const NavbarButton = styled.span`
-  color: #191919;
-  font-size: 30px;
+export const HeaderLink = styled.a`
+  text-decoration: none;
+`;
+
+export const Link = styled.li`
+  padding: 0px 14px;
+  display: inline;
+  cursor: pointer;
+  color: ${({ theme }) => theme.text};
+
+  &:hover {
+    ${mobile} {
+      display: block;
+      transition: 0.3s ease;
+    }
+  }
+
+  ${mobile.sm} {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    color: ${({ theme }) => theme.text};
+  }
+`;
+
+export const MenuButton = styled.div`
   display: none;
+
   ${mobile.sm} {
     display: block;
+    font-size: 40px;
+    cursor: pointer;
   }
+`;
+
+export const DownloadButton = styled(Button)`
+  width: 130px;
+  height: 40px;
+  margin: -10px 30px;
+`;
+
+export const ToggleButton = styled.button`
+  width: 40px;
+  border-radius: 50%;
+  margin: -10px;
+  color: ${({ theme }) => theme.button};
+  background-color: inherit;
 `;

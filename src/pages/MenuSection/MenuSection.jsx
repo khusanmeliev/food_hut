@@ -20,10 +20,10 @@ import {
 
 const MenuSection = () => {
   return (
-    <MenuWrapper>
+    <MenuWrapper id="menu">
       <StyledHeading>
-        <span>Menu</span> That <span style={{ color: "#FDC55E" }}>Always</span>{" "}
-        Make You <br /> Fall In <span>Love</span>
+        <span>Menu</span> That <span> Always</span> Make You <br /> Fall In{" "}
+        <span>Love</span>
       </StyledHeading>
 
       <MenuButtonWrapper>

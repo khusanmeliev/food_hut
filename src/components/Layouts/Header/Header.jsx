@@ -1,59 +1,62 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import {
-  List,
+  Button,
+  DownloadButton,
+  HeaderLink,
+  Link,
+  ListsWrapper,
   Logo,
   LogoImage,
   Menu,
   NavbarButton,
   NavbarWrapper,
+  ToggleButton,
 } from "./styles";
 import { AiOutlineMenu } from "react-icons/ai";
-import logo from "../../../assets/img/logo.jpg";
+import logo from "../../../assets/img/logo.png";
+import { FaMoon } from "react-icons/fa";
+import { ThemeContext } from "../../../App";
 
 const Header = () => {
   const navbar = useRef(null);
-  let prevScrollpos = window.pageYOffset;
   const [navbarOpen, setNavbarOpen] = useState(false);
-
-  window.onscroll = function () {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      navbar.current.style.top = "0";
-    } else {
-      navbar.current.style.top = "-100px";
-      navbar.current.style.backgroundColor = "#fff";
-    }
-    prevScrollpos = currentScrollPos;
-  };
 
   const handleCloseNavbar = () => {
     setNavbarOpen(false);
   };
+
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <NavbarWrapper ref={navbar}>
       <Logo>
         <LogoImage src={logo} alt="logo" />
       </Logo>
-      <div style={{ display: "flex" }}>
+      <ListsWrapper>
         <NavbarButton onClick={() => setNavbarOpen(!navbarOpen)}>
           <AiOutlineMenu />
         </NavbarButton>
         <Menu navbarOpen={navbarOpen}>
-          <a href="#home" onClick={handleCloseNavbar}>
-            <List>Today Special Offers</List>
-          </a>
-          <a href="#about" onClick={handleCloseNavbar}>
-            <List>Why FoodHut</List>
-          </a>
-          <a href="#advantages" onClick={handleCloseNavbar}>
-            <List>Our Menu</List>
-          </a>
-          <a href="#lessons" onClick={handleCloseNavbar}>
-            <List>Our Popular Food</List>
-          </a>
+          <HeaderLink href="#offers" onClick={handleCloseNavbar}>
+            <Link>Today Special Offers</Link>
+          </HeaderLink>
+          <HeaderLink href="#whyfoodhut" onClick={handleCloseNavbar}>
+            <Link>Why FoodHut</Link>
+          </HeaderLink>
+          <HeaderLink href="#menu" onClick={handleCloseNavbar}>
+            <Link>Our Menu</Link>
+          </HeaderLink>
+          <HeaderLink href="#food" onClick={handleCloseNavbar}>
+            <Link>Our Popular Food</Link>
+          </HeaderLink>
+          <HeaderLink href="#download">
+            <DownloadButton>Download App</DownloadButton>
+          </HeaderLink>
+          <ToggleButton onClick={toggleTheme}>
+            <FaMoon />
+          </ToggleButton>
         </Menu>
-      </div>
+      </ListsWrapper>
     </NavbarWrapper>
   );
 };

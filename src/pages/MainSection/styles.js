@@ -2,7 +2,7 @@ import styled from "styled-components";
 import mobile from "../../assets/styles/size";
 
 export const Wrapper = styled.div`
-  padding: 150px 80px 80px 80px;
+  padding: 90px 80px 80px 80px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px 0px;
+    padding: 30px 0px;
   }
 
   span {
@@ -30,7 +30,7 @@ export const TextsContainer = styled.div`
   ${mobile.lg} {
     width: 90%;
     height: 100%;
-    gap: 0px;
+    gap: 5px;
     box-sizing: border-box;
   }
 
@@ -77,7 +77,7 @@ export const Title = styled.h1`
   letter-spacing: 1px;
   color: ${({ theme }) => theme.text};
 
-  ${mobile.lg}{
+  ${mobile.lg} {
     font-size: 35px;
     letter-spacing: 0px;
   }
@@ -86,12 +86,10 @@ export const Title = styled.h1`
 export const OrangeImage = styled.img`
   mix-blend-mode: multiply;
   position: absolute;
-  margin-left: 410px;
-  margin-top: -110px;
+  margin: -110px 410px;
 
-  ${mobile.sm} {
-    margin-left: 225px;
-    margin-top: -90px;
+  ${mobile.md} {
+    margin: -90px 190px;
   }
 `;
 
@@ -112,19 +110,23 @@ export const PictureContainer = styled.div`
 export const FireImage = styled.img`
   mix-blend-mode: multiply;
   position: absolute;
-  margin-left: 0px;
-  margin-top: -230px;
+  margin: -230px 0px;
 `;
 
 export const LeafImage = styled.img`
   width: 100px;
   mix-blend-mode: multiply;
   position: absolute;
-  margin-top: -148px;
-  margin-left: 100px;
+  margin: -148px 100px;
   transform: rotate(-8deg);
 `;
 
+export const VectorLineImage = styled.img`
+  width: 100px;
+  position: absolute;
+  margin: -80px 220px;
+  mix-blend-mode: multiply;
+`;
 export const PizzaImage = styled.img`
   width: 340px;
   mix-blend-mode: multiply;
@@ -173,8 +175,8 @@ export const PlayIcon = styled.div`
   border-radius: 50%;
   display: grid;
   place-items: center;
-  margin-left: 50px;
   cursor: pointer;
+  margin-left: 50px;
 
   ${mobile.lg} {
     margin-left: 10px;
@@ -193,4 +195,29 @@ export const Input = styled.input`
   width: 200px;
   border-radius: 38px;
   background-color: #e6e6e6;
+`;
+
+export const FoodImage = styled.img`
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 130px;
+  margin: 70px -190px;
+`;
+export const FoodImagesecond = styled.img`
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 130px;
+  margin: 180px -100px;
+`;
+export const FoodImagethird = styled.img`
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 130px;
+  margin: 70px -190px;
+`;
+export const FoodImagefourth = styled.img`
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 130px;
+  margin: 70px -190px;
 `;

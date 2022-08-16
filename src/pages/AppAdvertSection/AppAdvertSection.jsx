@@ -1,4 +1,8 @@
 import React from "react";
+import chef from "../../assets/img/appAd/chef.png";
+import chefBack from "../../assets/img/appAd/chefBack.png";
+import imgCircle from "../../assets/img/imageCircle.png";
+
 import {
   AppDetails,
   AppName,
@@ -9,14 +13,18 @@ import {
   DetailsHeading,
   DetailsText,
   ImageBox,
+  ImageChef,
+  ImageCircle,
+  ImageOfOwpaz,
+  ImageOfRoom,
+  ImageRoom,
   Wrapper,
 } from "./styles";
-import owpaz from "../../assets/img/appAd/oshpaz.jpg";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 const AppAdvertSection = () => {
   return (
-    <Wrapper>
+    <Wrapper id="food">
       <Details>
         <DetailsHeading>
           It’s Now <span>More Easy</span> to
@@ -47,7 +55,13 @@ const AppAdvertSection = () => {
         </Buttons>
       </Details>
       <ImageBox>
-        <img src={owpaz} alt="pic" />
+        <ImageCircle src={imgCircle} />
+        <ImageRoom src={chefBack} />
+        <ImageChef src={chef} alt="pic" />
+        {/* <ImageBorderImg src={firstPic} />
+        <ImageBorderImg src={secondPic} />
+        <ImageBorderImg src={thirdPic} />
+        <ImageBorderImg src={fourthPic} /> */}
       </ImageBox>
     </Wrapper>
   );
