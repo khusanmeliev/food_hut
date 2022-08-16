@@ -1,30 +1,27 @@
 {
   "files": {
     "main.css": "/food_hut/static/css/main.ac26be2f.css",
-    "main.js": "/food_hut/static/js/main.bdf2a077.js",
+    "main.js": "/food_hut/static/js/main.3a88e051.js",
     "static/media/chef.png": "/food_hut/static/media/chef.b3582daae434be9fe43d.png",
     "static/media/chefBack.png": "/food_hut/static/media/chefBack.7350dfcd79da02f3369d.png",
     "static/media/pizzaGirl.jpg": "/food_hut/static/media/pizzaGirl.824d0602642cac5629fb.jpg",
     "static/media/8.png": "/food_hut/static/media/8.b019a8834acf8dba9a85.png",
-    "static/media/2.png": "/food_hut/static/media/2.4e1d711d75467c82ce46.png",
+    "static/media/2.png": "/food_hut/static/media/2.3bf499a9f17b449ee95c.png",
     "static/media/1.png": "/food_hut/static/media/1.c48f9c87ba59fa471866.png",
     "static/media/7.png": "/food_hut/static/media/7.37908cff65b4eca28742.png",
     "static/media/4.png": "/food_hut/static/media/4.9e41fb14e528b777f2ca.png",
     "static/media/3.png": "/food_hut/static/media/3.e9bcd47101f326286d0e.png",
     "static/media/6.png": "/food_hut/static/media/6.3a09351fdfc8db57b399.png",
     "static/media/5.png": "/food_hut/static/media/5.d18318518808a33d0ee9.png",
-    "static/media/3.jpg": "/food_hut/static/media/3.d0a0763ca4b8dc112e96.jpg",
-    "static/media/4.jpg": "/food_hut/static/media/4.0d3f21367e8a8914dbb2.jpg",
-    "static/media/1.jpg": "/food_hut/static/media/1.bd43cc4fd5579de834d6.jpg",
     "static/media/imageCircle.png": "/food_hut/static/media/imageCircle.c0a055abbd7aef923be0.png",
     "static/media/leaf.jpg": "/food_hut/static/media/leaf.9fa3fb747d095d610692.jpg",
     "static/media/vectorLine.jpg": "/food_hut/static/media/vectorLine.ef924b285da6284e0986.jpg",
     "index.html": "/food_hut/index.html",
     "main.ac26be2f.css.map": "/food_hut/static/css/main.ac26be2f.css.map",
-    "main.bdf2a077.js.map": "/food_hut/static/js/main.bdf2a077.js.map"
+    "main.3a88e051.js.map": "/food_hut/static/js/main.3a88e051.js.map"
   },
   "entrypoints": [
     "static/css/main.ac26be2f.css",
-    "static/js/main.bdf2a077.js"
+    "static/js/main.3a88e051.js"
   ]
 }
