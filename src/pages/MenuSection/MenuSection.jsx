@@ -36,7 +36,6 @@ const MenuSection = () => {
         <BTN>Desserts</BTN>
         <BTN>Drinks</BTN>
       </MenuButtonWrapper>
-
       <FoodWrapper>
         {foods.map((food) => (
           <FoodBox key={food.id}>
