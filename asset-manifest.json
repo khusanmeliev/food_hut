@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/food_hut/static/css/main.ac26be2f.css",
-    "main.js": "/food_hut/static/js/main.9c60a7a1.js",
+    "main.js": "/food_hut/static/js/main.0773a4b4.js",
     "static/media/chef.png": "/food_hut/static/media/chef.b3582daae434be9fe43d.png",
     "static/media/chefBack.png": "/food_hut/static/media/chefBack.7350dfcd79da02f3369d.png",
     "static/media/pizzaGirl.jpg": "/food_hut/static/media/pizzaGirl.824d0602642cac5629fb.jpg",
@@ -18,10 +18,10 @@
     "static/media/vectorLine.jpg": "/food_hut/static/media/vectorLine.ef924b285da6284e0986.jpg",
     "index.html": "/food_hut/index.html",
     "main.ac26be2f.css.map": "/food_hut/static/css/main.ac26be2f.css.map",
-    "main.9c60a7a1.js.map": "/food_hut/static/js/main.9c60a7a1.js.map"
+    "main.0773a4b4.js.map": "/food_hut/static/js/main.0773a4b4.js.map"
   },
   "entrypoints": [
     "static/css/main.ac26be2f.css",
-    "static/js/main.9c60a7a1.js"
+    "static/js/main.0773a4b4.js"
   ]
 }
